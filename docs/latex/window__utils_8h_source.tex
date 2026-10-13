@@ -1,0 +1,79 @@
+\doxysection{window\+\_\+utils.\+h}
+\hypertarget{window__utils_8h_source}{}\label{window__utils_8h_source}\index{src/window\_utils/window\_utils.h@{src/window\_utils/window\_utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2026\ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify\ it}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ any\ later\ version.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but\ WITHOUT}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of\ MERCHANTABILITY\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ See\ the\ GNU\ General\ Public\ License\ for}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ more\ details.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ along\ with}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ this\ program.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2016\ \string~\ 2018\ Deepin\ Technology\ Co.,\ Ltd.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2016\ \string~\ 2018\ dragondjf}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2026\ CharOfString}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ Author:\ dragondjf\ <dingjiangfeng@deepin.com>}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ Maintainer:\ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ dragondjf<dingjiangfeng@deepin.com>}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ zccrs<zhangjide@deepin.com>}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ Tangtong<tangtong@deepin.com>}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ This\ class\ was\ adapted\ \&\ modified\ from\ Deepin\ DDE.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifndef\ WINDOW\_UTILS\_WINDOW\_UTILS\_H\_}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ WINDOW\_UTILS\_WINDOW\_UTILS\_H\_}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}QMouseEvent"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}QRect"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}QWidget"{}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}bernese/export.h"{}}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{namespace\ }bernese\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{namespace\ }window\_utils\ \{}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00058\ BERNESE\_EXPORT\ Qt::Edges\ EdgesAt(QWidget*\ widget,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ border);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ MoveWindow(}
+\DoxyCodeLine{00068\ \ \ \ \ QWidget*\ widget,\ QMouseEvent*\ event,\ \textcolor{keyword}{const}\ QRect\&\ draggable\_rect);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00080\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ ResizeWindow(}
+\DoxyCodeLine{00081\ \ \ \ \ QWidget*\ widget,\ QMouseEvent*\ event,\ \textcolor{keywordtype}{int}\ border\_inner\_size\ =\ 6);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ ShowMaximizedWindow(QWidget*\ widget);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ ShowMinimizedWindow(QWidget*\ widget);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ ShowNormalWindow(QWidget*\ widget);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ BERNESE\_EXPORT\ \textcolor{keywordtype}{void}\ ToggleMaximizedWindow(QWidget*\ widget);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ SetNormalCursor(QWidget*\ widget);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00125\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ SetHandleCursor(QWidget*\ widget);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00136\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ SetCursorByCursorType(QWidget*\ widget,}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ cursor\_type);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00149\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ UpdateCursorShape(QWidget*\ widget,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{int}\ border\_inner\_size\ =\ 6);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \}\ \ \textcolor{comment}{//\ namespace\ window\_utils}}
+\DoxyCodeLine{00153\ \}\ \ \textcolor{comment}{//\ namespace\ bernese}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ WINDOW\_UTILS\_WINDOW\_UTILS\_H\_}}
+
+\end{DoxyCode}

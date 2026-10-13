@@ -66,3 +66,17 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Debian build artifacts
+obj-*/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/tmp/
+debian/*.substvars
+debian/libgxde-bernese-qt6-0/
+debian/libgxde-bernese-qt6-dev/
+
+# VSCode Extensions
+.cache/*
+build/*

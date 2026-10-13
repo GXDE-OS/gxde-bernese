@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1text__layout__utils" kind="namespace" language="C++">
+    <compoundname>bernese::text_layout_utils</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="text__layout__utils_8cc_1a6b110302e9f2026963091d190c8cad01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::text_layout_utils::DrawElidedText</definition>
+        <argsstring>(QTextLayout *layout, const QSizeF &amp;size, QTextOption::WrapMode word_wrap, Qt::TextElideMode mode, qreal line_height, int flags, QStringList *lines, QPainter *painter, QPointF offset, const QColor &amp;shadow_color, const QPointF &amp;shadow_offset, const QBrush &amp;background, qreal background_radius, QList&lt; QRectF &gt; *bounding_region, QTextDocument *document=nullptr)</argsstring>
+        <name>DrawElidedText</name>
+        <qualifiedname>bernese::text_layout_utils::DrawElidedText</qualifiedname>
+        <param>
+          <type>QTextLayout *</type>
+          <declname>layout</declname>
+        </param>
+        <param>
+          <type>const QSizeF &amp;</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>QTextOption::WrapMode</type>
+          <declname>word_wrap</declname>
+        </param>
+        <param>
+          <type>Qt::TextElideMode</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>line_height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>QStringList *</type>
+          <declname>lines</declname>
+        </param>
+        <param>
+          <type>QPainter *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>QPointF</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>const QColor &amp;</type>
+          <declname>shadow_color</declname>
+        </param>
+        <param>
+          <type>const QPointF &amp;</type>
+          <declname>shadow_offset</declname>
+        </param>
+        <param>
+          <type>const QBrush &amp;</type>
+          <declname>background</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>background_radius</declname>
+        </param>
+        <param>
+          <type>QList&lt; QRectF &gt; *</type>
+          <declname>bounding_region</declname>
+        </param>
+        <param>
+          <type>QTextDocument *</type>
+          <declname>document</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Lay out text and optionally paint it within a bounded area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>No ownership of input objects is transferred. </para>
+</simplesect>
+<simplesect kind="note"><para>Your QTextLayout&apos;s text and layout state may change. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-null borrowed layout; its </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Available area in logical pixels; non-positive dimensions do nothing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>word_wrap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wrapping mode before the final visible line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Elision mode for text exceeding the available area. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical line height; non-positive values use the font height. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qt alignment and font-metric elision flags. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lines</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional output list to which visible line strings are appended. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>painter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional borrowed painter; null performs layout only. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial line position in logical painter coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shadow_color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shadow color; an invalid color disables the shadow. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shadow_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset supplied when painting the line shadow. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>background</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Background brush; Qt::NoBrush disables the background. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>background_radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Background corner radius in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bounding_region</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional output list to which line rectangles are appended. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional borrowed document owning layout; preserves a leading inline object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/text_layout_utils/text_layout_utils.cc" line="212" column="6" bodyfile="src/text_layout_utils/text_layout_utils.cc" bodystart="212" bodyend="361" declfile="src/text_layout_utils/text_layout_utils.h" declline="78" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/text_layout_utils/text_layout_utils.cc" line="60" column="1"/>
+  </compounddef>
+</doxygen>

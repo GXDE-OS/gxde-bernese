@@ -1,0 +1,71 @@
+.TH "bernese::image_utils::internal::ChannelSum" 3 "GXDE Bernese" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+bernese::image_utils::internal::ChannelSum
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAccumulate\fP (QRgb pixel, int weight)"
+.br
+.RI "Add or subtract one premultiplied pixel from the running sum\&. "
+.ti -1c
+.RI "QRgb \fBAverage\fP (int sample_count) const"
+.br
+.RI "Compute the averaged premultiplied pixel\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "qint64 \fBred\fP = 0"
+.br
+.ti -1c
+.RI "qint64 \fBgreen\fP = 0"
+.br
+.ti -1c
+.RI "qint64 \fBblue\fP = 0"
+.br
+.ti -1c
+.RI "qint64 \fBalpha\fP = 0"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void bernese::image_utils::internal::ChannelSum::Accumulate (QRgb pixel, int weight)\fC [inline]\fP"
+
+.PP
+Add or subtract one premultiplied pixel from the running sum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpixel\fP Premultiplied pixel channels\&. 
+.br
+\fIweight\fP Use 1 to add or -1 to remove a sample\&. 
+.RE
+.PP
+
+.SS "QRgb bernese::image_utils::internal::ChannelSum::Average (int sample_count) const\fC [inline]\fP"
+
+.PP
+Compute the averaged premultiplied pixel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsample_count\fP Positive number of samples represented by the sum\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Packed averaged channels\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GXDE Bernese from the source code\&.

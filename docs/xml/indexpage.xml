@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>GXDE Bernese</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> </para>
+<sect1 id="index_1autotoc_md1">
+<title>Introduction</title>
+<para>Welcome to <computeroutput>gxde-bernese</computeroutput>, GXDE&apos;s compatibility library that replaces direct Qt Private API with those public ones.</para>
+<sect2 id="index_1autotoc_md2">
+<title>Background Informaton</title>
+<para>GXDE used linuxdeepin&apos;s components heavily. Early Deepin source code (particularly during the DTK2 era) relied heavily on Qt private headers. The Qt private headers does NOT guarantee API stability, hence when Qt upgrades, those components might be also break.</para>
+<para>This issue becomes particularly acute now that we are supporting rolling-release distributions like Arch Linux: Arch Linux continuously updates its Qt version, leading to more frequent breakages.</para>
+<para>Every time a breaking change occurred, we had to rebuild all programs that included Qt private headers. Consequently, the new idea was to eliminate the applications&apos; dependencies on Qt private APIs entirely—and that is how this library came into being.</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Licensing</title>
+<para>GXDE Bernese is licensed under <emphasis><ulink url="./LICENSE">GNU GENERAL PUBLIC LICENSE Version 3</ulink></emphasis>. You may see the <computeroutput>LICENSE</computeroutput> file on the project repository. </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,33 @@
+BasedOnStyle: Google
+Standard: c++20
+DerivePointerAlignment: false
+PointerAlignment: Left
+# Qt, Xlib and XCB are third-party headers, not C standard headers. Keeping
+# them in one group also puts Qt declarations before Xlib's conflicting macros.
+IncludeCategories:
+  - Regex: '^"(Q|Qt|X11/|xcb/)'
+    Priority: 3
+  - Regex: '^<.*\.h>'
+    Priority: 1
+  - Regex: '^<'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 4
+
+# Prefer explicit control flow and space for future edits.
+InsertBraces: true
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Empty
+
+# Repository-specific layout rules from AGENTS.md.
+ColumnLimit: 80
+IndentWidth: 2
+ContinuationIndentWidth: 4
+CompactNamespaces: false
+NamespaceIndentation: None
+SeparateDefinitionBlocks: Always
+
+# Use fixed continuation indentation instead of aligning to opening brackets.
+AlignAfterOpenBracket: DontAlign

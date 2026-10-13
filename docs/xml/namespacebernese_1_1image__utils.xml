@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1image__utils" kind="namespace" language="C++">
+    <compoundname>bernese::image_utils</compoundname>
+    <innernamespace refid="namespacebernese_1_1image__utils_1_1internal">bernese::image_utils::internal</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="image__utils_8cc_1a068af6f71090c40b5cea67f2c1d19783" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QString</type>
+        <definition>BERNESE_EXPORT QString bernese::image_utils::ScaledAssetPath</definition>
+        <argsstring>(const QString &amp;path, qreal scale, qreal *source_scale)</argsstring>
+        <name>ScaledAssetPath</name>
+        <qualifiedname>bernese::image_utils::ScaledAssetPath</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>qreal *</type>
+          <declname>source_scale</declname>
+        </param>
+        <briefdescription>
+<para>Resolve a Qt-style high-DPI asset path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Prefers the smallest adequate scale, otherwise the largest available. Honors QT_HIGHDPI_DISABLE_2X_IMAGE_LOADING.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original asset path, possibly already carrying a scale suffix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Requested device scale. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>source_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-null output receiving the selected scale, or 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Selected asset path, or the original path if no alternative is found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/image_utils.cc" line="101" column="9" bodyfile="src/image_utils/image_utils.cc" bodystart="101" bodyend="128" declfile="src/image_utils/image_utils.h" declline="41" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="image__utils_8cc_1a635e58d2d1ada72f844cce6f8a330323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::image_utils::Blur</definition>
+        <argsstring>(QImage &amp;image, qreal radius)</argsstring>
+        <name>Blur</name>
+        <qualifiedname>bernese::image_utils::Blur</qualifiedname>
+        <param>
+          <type>QImage &amp;</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Apply an in-place approximation of Gaussian blur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses three separable box passes on premultiplied channels. Null images and non-positive radii are unchanged; other images become ARGB32 premultiplied.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image to modify; its device pixel ratio is preserved. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blur radius in physical image pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/image_utils.cc" line="130" column="6" bodyfile="src/image_utils/image_utils.cc" bodystart="130" bodyend="148" declfile="src/image_utils/image_utils.h" declline="54" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/image_utils/channel_sum/channel_sum.h" line="25" column="1"/>
+  </compounddef>
+</doxygen>

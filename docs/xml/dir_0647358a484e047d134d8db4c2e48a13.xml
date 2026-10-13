@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_0647358a484e047d134d8db4c2e48a13" kind="dir">
+    <compoundname>src/backdrop_origin</compoundname>
+    <innerdir refid="dir_aa8ce4bb2beff2f249a019f97e6d508d">src/backdrop_origin/connection</innerdir>
+    <innerfile refid="backdrop__origin_8cc">backdrop_origin.cc</innerfile>
+    <innerfile refid="backdrop__origin_8h">backdrop_origin.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/backdrop_origin/"/>
+  </compounddef>
+</doxygen>

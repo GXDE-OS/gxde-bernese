@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classbernese_1_1X11Info" kind="class" language="C++" prot="public">
+    <compoundname>bernese::X11Info</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classbernese_1_1X11Info_1ab88c5253d7b84b251a2c23cddaf7bdbe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::X11Info::IsPlatformX11</definition>
+        <argsstring>()</argsstring>
+        <name>IsPlatformX11</name>
+        <qualifiedname>bernese::X11Info::IsPlatformX11</qualifiedname>
+        <briefdescription>
+<para>Check whether we&apos;re using Qt XCB platform. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Note that <computeroutput>XCB</computeroutput>, <computeroutput>D-XCB</computeroutput>, and <computeroutput>XWayland</computeroutput> all counts. </para>
+</simplesect>
+<simplesect kind="return"><para>True when we&apos;re using X11 platform. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/x11_info/x11_info.h" line="38" column="15" bodyfile="src/x11_info/x11_info.cc" bodystart="31" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classbernese_1_1X11Info_1aca576461c5dad7a8be9794ade9129aa4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Display *</type>
+        <definition>Display * bernese::X11Info::GetDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>GetDisplay</name>
+        <qualifiedname>bernese::X11Info::GetDisplay</qualifiedname>
+        <briefdescription>
+<para>Access the Xlib display connection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Must be called on the Qt GUI thread. The display connection will keep alive till Qt shuts down. </para>
+</simplesect>
+<simplesect kind="warning"><para>Don&apos;t shut down the connection manually!! </para>
+</simplesect>
+<simplesect kind="return"><para>The display borrowed, or <computeroutput>nullptr</computeroutput> when fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/x11_info/x11_info.h" line="48" column="18" bodyfile="src/x11_info/x11_info.cc" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classbernese_1_1X11Info_1a31a324f635d8dbf18f2edca9bf210434" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xcb_connection_t *</type>
+        <definition>xcb_connection_t * bernese::X11Info::GetConnection</definition>
+        <argsstring>()</argsstring>
+        <name>GetConnection</name>
+        <qualifiedname>bernese::X11Info::GetConnection</qualifiedname>
+        <briefdescription>
+<para>Access the XCB connection we already have. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Must be called on the Qt GUI thread. The display connection will keep alive till Qt shuts down. </para>
+</simplesect>
+<simplesect kind="warning"><para>Don&apos;t shut down the connection manually!! </para>
+</simplesect>
+<simplesect kind="return"><para>a XCB connection struct. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/x11_info/x11_info.h" line="58" column="27" bodyfile="src/x11_info/x11_info.cc" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classbernese_1_1X11Info_1a478cd7a80950b717e74bc6b25b770803" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Time</type>
+        <definition>Time bernese::X11Info::GetTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimestamp</name>
+        <qualifiedname>bernese::X11Info::GetTimestamp</qualifiedname>
+        <briefdescription>
+<para>Get an X server timestamp. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Must be called on the Qt GUI thread </para>
+</simplesect>
+<simplesect kind="return"><para>X11 Server timestamp, or can be XCB CurrentTime if failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/x11_info/x11_info.h" line="66" column="15" bodyfile="src/x11_info/x11_info.cc" bodystart="60" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/x11_info/x11_info.h" line="30" column="1" bodyfile="src/x11_info/x11_info.h" bodystart="30" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classbernese_1_1X11Info_1a31a324f635d8dbf18f2edca9bf210434" prot="public" virt="non-virtual"><scope>bernese::X11Info</scope><name>GetConnection</name></member>
+      <member refid="classbernese_1_1X11Info_1aca576461c5dad7a8be9794ade9129aa4" prot="public" virt="non-virtual"><scope>bernese::X11Info</scope><name>GetDisplay</name></member>
+      <member refid="classbernese_1_1X11Info_1a478cd7a80950b717e74bc6b25b770803" prot="public" virt="non-virtual"><scope>bernese::X11Info</scope><name>GetTimestamp</name></member>
+      <member refid="classbernese_1_1X11Info_1ab88c5253d7b84b251a2c23cddaf7bdbe" prot="public" virt="non-virtual"><scope>bernese::X11Info</scope><name>IsPlatformX11</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

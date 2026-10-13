@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbernese_1_1wayland_1_1internal_1_1Connection" kind="struct" language="C++" prot="public">
+    <compoundname>bernese::wayland::internal::Connection</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbernese_1_1wayland_1_1internal_1_1Connection_1ae9c1d0120c3a7ad7f67210251459ad8e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bernese::wayland::internal::Connection::screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <qualifiedname>bernese::wayland::internal::Connection::screen</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/backdrop_origin/connection/connection.h" line="29" column="7" bodyfile="src/backdrop_origin/connection/connection.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1wayland_1_1internal_1_1Connection_1a04c40bc7fb00b039507d851354902e04" prot="public" static="no" mutable="no">
+        <type>xcb_connection_t *</type>
+        <definition>xcb_connection_t* bernese::wayland::internal::Connection::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>bernese::wayland::internal::Connection::value</qualifiedname>
+        <initializer>= xcb_connect(nullptr, &amp;screen)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/backdrop_origin/connection/connection.h" line="30" column="20" bodyfile="src/backdrop_origin/connection/connection.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/backdrop_origin/connection/connection.h" line="28" column="1" bodyfile="src/backdrop_origin/connection/connection.h" bodystart="28" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1ae9c1d0120c3a7ad7f67210251459ad8e" prot="public" virt="non-virtual"><scope>bernese::wayland::internal::Connection</scope><name>screen</name></member>
+      <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1a04c40bc7fb00b039507d851354902e04" prot="public" virt="non-virtual"><scope>bernese::wayland::internal::Connection</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

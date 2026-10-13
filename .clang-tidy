@@ -1,0 +1,19 @@
+Checks: '-*,readability-identifier-naming,google-build-using-namespace,google-global-names-in-headers,google-readability-casting,google-runtime-int'
+WarningsAsErrors: '*'
+HeaderFilterRegex: '(^|/)(src|tests)/.*\.h$'
+CheckOptions:
+  readability-identifier-naming.NamespaceCase: lower_case
+  readability-identifier-naming.ClassCase: CamelCase
+  readability-identifier-naming.StructCase: CamelCase
+  readability-identifier-naming.FunctionCase: CamelCase
+  readability-identifier-naming.MethodCase: CamelCase
+  readability-identifier-naming.ParameterCase: lower_case
+  readability-identifier-naming.VariableCase: lower_case
+  readability-identifier-naming.MemberCase: lower_case
+  readability-identifier-naming.PrivateMemberSuffix: '_'
+  readability-identifier-naming.GlobalConstantCase: CamelCase
+  readability-identifier-naming.GlobalConstantPrefix: k
+  readability-identifier-naming.StaticConstantCase: CamelCase
+  readability-identifier-naming.StaticConstantPrefix: k
+  # QtTest locates the data provider by the exact <test>_data suffix.
+  readability-identifier-naming.MethodIgnoredRegexp: '^Wrapping_data$'

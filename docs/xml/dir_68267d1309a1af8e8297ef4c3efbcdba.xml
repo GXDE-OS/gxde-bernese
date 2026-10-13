@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_0647358a484e047d134d8db4c2e48a13">src/backdrop_origin</innerdir>
+    <innerdir refid="dir_98ca2cffd6b079a45db86b63e7cbb5df">src/file_dialog_utils</innerdir>
+    <innerdir refid="dir_091a4c3f56671012ef0088bfb194b9f9">src/image_utils</innerdir>
+    <innerdir refid="dir_fd57b066ae6df75c31ad949ff830cd48">src/text_layout_utils</innerdir>
+    <innerdir refid="dir_eca5b99db9fd3b26c35224ecfe0be349">src/window_utils</innerdir>
+    <innerdir refid="dir_b81d3e965a818c7d21364038c34f4896">src/x11_info</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

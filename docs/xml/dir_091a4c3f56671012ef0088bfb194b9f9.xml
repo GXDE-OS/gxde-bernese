@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_091a4c3f56671012ef0088bfb194b9f9" kind="dir">
+    <compoundname>src/image_utils</compoundname>
+    <innerdir refid="dir_ed65a0c12b5e50264b5b15fcca59386f">src/image_utils/channel_sum</innerdir>
+    <innerfile refid="image__utils_8cc">image_utils.cc</innerfile>
+    <innerfile refid="image__utils_8h">image_utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/image_utils/"/>
+  </compounddef>
+</doxygen>

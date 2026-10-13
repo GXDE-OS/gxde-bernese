@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1file__dialog__utils" kind="namespace" language="C++">
+    <compoundname>bernese::file_dialog_utils</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="file__dialog__utils_8cc_1a82cfa66ad2c2c3f79f8b50df27098a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>BERNESE_EXPORT QStringList bernese::file_dialog_utils::CleanFilterList</definition>
+        <argsstring>(QString filter)</argsstring>
+        <name>CleanFilterList</name>
+        <qualifiedname>bernese::file_dialog_utils::CleanFilterList</qualifiedname>
+        <param>
+          <type>QString</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+<para>Extract patterns from a file-dialog name filter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A labelled filter such as &quot;Images (*.png *.jpg)&quot; or bare patterns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Space-separated patterns with empty entries removed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_dialog_utils/file_dialog_utils.cc" line="27" column="13" bodyfile="src/file_dialog_utils/file_dialog_utils.cc" bodystart="27" bodyend="36" declfile="src/file_dialog_utils/file_dialog_utils.h" declline="36" declcolumn="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/file_dialog_utils/file_dialog_utils.cc" line="25" column="1"/>
+  </compounddef>
+</doxygen>

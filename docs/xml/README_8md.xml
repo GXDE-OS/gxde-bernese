@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>GXDE<sp/>Bernese</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Introduction</highlight></codeline>
+<codeline><highlight class="normal">Welcome<sp/>to<sp/>`gxde-bernese`,<sp/>GXDE&apos;s<sp/>compatibility<sp/>library<sp/>that<sp/>replaces<sp/>direct<sp/>Qt<sp/>Private<sp/>API<sp/>with<sp/>those<sp/>public<sp/>ones.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Background<sp/>Informaton</highlight></codeline>
+<codeline><highlight class="normal">GXDE<sp/>used<sp/>linuxdeepin&apos;s<sp/>components<sp/>heavily.<sp/>Early<sp/>Deepin<sp/>source<sp/>code<sp/>(particularly<sp/>during<sp/>the<sp/>DTK2<sp/>era)<sp/>relied<sp/>heavily<sp/>on<sp/>Qt<sp/>private<sp/>headers.<sp/>The<sp/>Qt<sp/>private<sp/>headers<sp/>does<sp/>NOT<sp/>guarantee<sp/>API<sp/>stability,<sp/>hence<sp/>when<sp/>Qt<sp/>upgrades,<sp/>those<sp/>components<sp/>might<sp/>be<sp/>also<sp/>break.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>issue<sp/>becomes<sp/>particularly<sp/>acute<sp/>now<sp/>that<sp/>we<sp/>are<sp/>supporting<sp/>rolling-release<sp/>distributions<sp/>like<sp/>Arch<sp/>Linux:<sp/>Arch<sp/>Linux<sp/>continuously<sp/>updates<sp/>its<sp/>Qt<sp/>version,<sp/>leading<sp/>to<sp/>more<sp/>frequent<sp/>breakages.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Every<sp/>time<sp/>a<sp/>breaking<sp/>change<sp/>occurred,<sp/>we<sp/>had<sp/>to<sp/>rebuild<sp/>all<sp/>programs<sp/>that<sp/>included<sp/>Qt<sp/>private<sp/>headers.<sp/>Consequently,<sp/>the<sp/>new<sp/>idea<sp/>was<sp/>to<sp/>eliminate<sp/>the<sp/>applications&apos;<sp/>dependencies<sp/>on<sp/>Qt<sp/>private<sp/>APIs<sp/>entirely—and<sp/>that<sp/>is<sp/>how<sp/>this<sp/>library<sp/>came<sp/>into<sp/>being.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Licensing</highlight></codeline>
+<codeline><highlight class="normal">GXDE<sp/>Bernese<sp/>is<sp/>licensed<sp/>under<sp/>*[GNU<sp/>GENERAL<sp/>PUBLIC<sp/>LICENSE<sp/>Version<sp/>3](./LICENSE)*.<sp/>You<sp/>may<sp/>see<sp/>the<sp/>`LICENSE`<sp/>file<sp/>on<sp/>the<sp/>project<sp/>repository.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

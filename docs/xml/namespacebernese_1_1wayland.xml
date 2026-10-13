@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1wayland" kind="namespace" language="C++">
+    <compoundname>bernese::wayland</compoundname>
+    <innernamespace refid="namespacebernese_1_1wayland_1_1internal">bernese::wayland::internal</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="backdrop__origin_8cc_1adb27027fe6dfa512a272bcdb1e810706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QRect</type>
+        <definition>BERNESE_EXPORT QRect bernese::wayland::LogicalWorkArea</definition>
+        <argsstring>(const QRect &amp;native_output, const QRect &amp;native_area, const QRect &amp;logical_output)</argsstring>
+        <name>LogicalWorkArea</name>
+        <qualifiedname>bernese::wayland::LogicalWorkArea</qualifiedname>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>native_output</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>native_area</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>logical_output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a native work area into logical output coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the ratio of output dimensions, not the Wayland buffer DPR.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>native_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output rectangle in the native coordinate space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>native_area</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Work area in the same native coordinate space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logical_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding output rectangle in logical coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Clipped logical work area, or an empty rectangle for invalid geometry. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/backdrop_origin/backdrop_origin.cc" line="153" column="7" bodyfile="src/backdrop_origin/backdrop_origin.cc" bodystart="153" bodyend="178" declfile="src/backdrop_origin/backdrop_origin.h" declline="42" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="backdrop__origin_8cc_1af4e586bca26a483b706c92622fc5bfe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QRect</type>
+        <definition>BERNESE_EXPORT QRect bernese::wayland::XwaylandWorkArea</definition>
+        <argsstring>(const QString &amp;output_name, const QRect &amp;logical_output)</argsstring>
+        <name>XwaylandWorkArea</name>
+        <qualifiedname>bernese::wayland::XwaylandWorkArea</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>output_name</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>logical_output</declname>
+        </param>
+        <briefdescription>
+<para>Read the logical work area for a named XWayland output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses a separate, read-only, process-lifetime XCB connection through DISPLAY. Call on the GUI thread. Missing DISPLAY, outputs or EWMH data are tolerated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exact RandR output name to match. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logical_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output rectangle in logical coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted work area, or an empty rectangle when lookup fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/backdrop_origin/backdrop_origin.cc" line="180" column="7" bodyfile="src/backdrop_origin/backdrop_origin.cc" bodystart="180" bodyend="210" declfile="src/backdrop_origin/backdrop_origin.h" declline="55" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="backdrop__origin_8cc_1a8887f0141b843f883289ac5d5047f0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QPoint</type>
+        <definition>BERNESE_EXPORT QPoint bernese::wayland::BackdropOrigin</definition>
+        <argsstring>(const QRect &amp;screen, const QSize &amp;surface, const QRect &amp;available, const QPoint &amp;fallback)</argsstring>
+        <name>BackdropOrigin</name>
+        <qualifiedname>bernese::wayland::BackdropOrigin</qualifiedname>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>screen</declname>
+        </param>
+        <param>
+          <type>const QSize &amp;</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>available</declname>
+        </param>
+        <param>
+          <type>const QPoint &amp;</type>
+          <declname>fallback</declname>
+        </param>
+        <briefdescription>
+<para>Locate a desktop surface within its wallpaper. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>screen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output rectangle in logical desktop coordinates. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desktop surface size in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>available</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Available work area in the same coordinates as screen. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fallback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin to use when the work area does not match. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Output-local work-area origin, zero for a full-size surface, or fallback. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/backdrop_origin/backdrop_origin.cc" line="212" column="8" bodyfile="src/backdrop_origin/backdrop_origin.cc" bodystart="212" bodyend="224" declfile="src/backdrop_origin/backdrop_origin.h" declline="68" declcolumn="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/backdrop_origin/backdrop_origin.cc" line="35" column="1"/>
+  </compounddef>
+</doxygen>

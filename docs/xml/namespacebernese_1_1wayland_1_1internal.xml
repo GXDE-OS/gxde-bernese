@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1wayland_1_1internal" kind="namespace" language="C++">
+    <compoundname>bernese::wayland::internal</compoundname>
+    <innerclass refid="structbernese_1_1wayland_1_1internal_1_1Connection" prot="public">bernese::wayland::internal::Connection</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/backdrop_origin/connection/connection.h" line="25" column="1"/>
+  </compounddef>
+</doxygen>

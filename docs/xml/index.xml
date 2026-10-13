@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kind="struct"><name>bernese::image_utils::internal::ChannelSum</name>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" kind="variable"><name>red</name></member>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" kind="variable"><name>green</name></member>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1ac8d7d515648015926d4de78935965c77" kind="variable"><name>blue</name></member>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1a00811457d9698f19d65cc3acb1f8276f" kind="variable"><name>alpha</name></member>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" kind="function"><name>Accumulate</name></member>
+    <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1ace944c7b170bfb2e5ebe37e1ab3aaec8" kind="function"><name>Average</name></member>
+  </compound>
+  <compound refid="structbernese_1_1wayland_1_1internal_1_1Connection" kind="struct"><name>bernese::wayland::internal::Connection</name>
+    <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1ae9c1d0120c3a7ad7f67210251459ad8e" kind="variable"><name>screen</name></member>
+    <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1a04c40bc7fb00b039507d851354902e04" kind="variable"><name>value</name></member>
+  </compound>
+  <compound refid="classbernese_1_1X11Info" kind="class"><name>bernese::X11Info</name>
+    <member refid="classbernese_1_1X11Info_1ab88c5253d7b84b251a2c23cddaf7bdbe" kind="function"><name>IsPlatformX11</name></member>
+    <member refid="classbernese_1_1X11Info_1aca576461c5dad7a8be9794ade9129aa4" kind="function"><name>GetDisplay</name></member>
+    <member refid="classbernese_1_1X11Info_1a31a324f635d8dbf18f2edca9bf210434" kind="function"><name>GetConnection</name></member>
+    <member refid="classbernese_1_1X11Info_1a478cd7a80950b717e74bc6b25b770803" kind="function"><name>GetTimestamp</name></member>
+  </compound>
+  <compound refid="namespacebernese" kind="namespace"><name>bernese</name>
+  </compound>
+  <compound refid="namespacebernese_1_1file__dialog__utils" kind="namespace"><name>bernese::file_dialog_utils</name>
+    <member refid="file__dialog__utils_8cc_1a82cfa66ad2c2c3f79f8b50df27098a2f" kind="function"><name>CleanFilterList</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1image__utils" kind="namespace"><name>bernese::image_utils</name>
+    <member refid="image__utils_8cc_1a068af6f71090c40b5cea67f2c1d19783" kind="function"><name>ScaledAssetPath</name></member>
+    <member refid="image__utils_8cc_1a635e58d2d1ada72f844cce6f8a330323" kind="function"><name>Blur</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1image__utils_1_1_0d6" kind="namespace"><name>bernese::image_utils::@6</name>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6" kind="enum"><name>BlurAxis</name></member>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6a3d3bbb7767b92dd2ae2c7128cf66d2ca" kind="enumvalue"><name>kHorizontal</name></member>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6a04da8b9a72f74bff480c2858ffc1bc95" kind="enumvalue"><name>kVertical</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1image__utils_1_1internal" kind="namespace"><name>bernese::image_utils::internal</name>
+  </compound>
+  <compound refid="namespacebernese_1_1text__layout__utils" kind="namespace"><name>bernese::text_layout_utils</name>
+    <member refid="text__layout__utils_8cc_1a6b110302e9f2026963091d190c8cad01" kind="function"><name>DrawElidedText</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1text__layout__utils_1_1_0d8" kind="namespace"><name>bernese::text_layout_utils::@8</name>
+  </compound>
+  <compound refid="namespacebernese_1_1wayland" kind="namespace"><name>bernese::wayland</name>
+    <member refid="backdrop__origin_8cc_1adb27027fe6dfa512a272bcdb1e810706" kind="function"><name>LogicalWorkArea</name></member>
+    <member refid="backdrop__origin_8cc_1af4e586bca26a483b706c92622fc5bfe3" kind="function"><name>XwaylandWorkArea</name></member>
+    <member refid="backdrop__origin_8cc_1a8887f0141b843f883289ac5d5047f0a9" kind="function"><name>BackdropOrigin</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1wayland_1_1_0d0" kind="namespace"><name>bernese::wayland::@0</name>
+  </compound>
+  <compound refid="namespacebernese_1_1wayland_1_1internal" kind="namespace"><name>bernese::wayland::internal</name>
+  </compound>
+  <compound refid="namespacebernese_1_1window__utils" kind="namespace"><name>bernese::window_utils</name>
+    <member refid="window__utils_8cc_1a9db1a9c6470b793e6e6856807000c7d7" kind="function"><name>EdgesAt</name></member>
+    <member refid="window__utils_8cc_1a37fe905863bed7f1110a7dd01e4cb815" kind="function"><name>MoveWindow</name></member>
+    <member refid="window__utils_8cc_1a04b7cf185d1d19441b42031e872ea5d3" kind="function"><name>ResizeWindow</name></member>
+    <member refid="window__utils_8cc_1a6d18f7bfe1c381ddd1c3b5a631617c46" kind="function"><name>ShowMaximizedWindow</name></member>
+    <member refid="window__utils_8cc_1a4ea6e43247f6e7cfbe6921ced0777422" kind="function"><name>ShowMinimizedWindow</name></member>
+    <member refid="window__utils_8cc_1aa5d9f9d6a6e1885d980f403ec6103acd" kind="function"><name>ShowNormalWindow</name></member>
+    <member refid="window__utils_8cc_1a8a06c4c32f8ded1f479dda116d66c909" kind="function"><name>ToggleMaximizedWindow</name></member>
+    <member refid="window__utils_8cc_1a34dac123792f5ce62d3542834ff70fe4" kind="function"><name>UpdateCursorShape</name></member>
+    <member refid="window__utils_8cc_1ad4c3dbc874d6f2ac8f1263a66abd3cc7" kind="function"><name>SetNormalCursor</name></member>
+    <member refid="window__utils_8cc_1a3d626a8f624bfd02db64a19eb1a1a3f1" kind="function"><name>SetHandleCursor</name></member>
+    <member refid="window__utils_8cc_1ad1a16add490e8bfb168eb9000708798d" kind="function"><name>SetCursorByCursorType</name></member>
+  </compound>
+  <compound refid="LICENSE" kind="file"><name>LICENSE</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="backdrop__origin_8cc" kind="file"><name>backdrop_origin.cc</name>
+  </compound>
+  <compound refid="backdrop__origin_8h" kind="file"><name>backdrop_origin.h</name>
+  </compound>
+  <compound refid="connection_8h" kind="file"><name>connection.h</name>
+  </compound>
+  <compound refid="file__dialog__utils_8cc" kind="file"><name>file_dialog_utils.cc</name>
+  </compound>
+  <compound refid="file__dialog__utils_8h" kind="file"><name>file_dialog_utils.h</name>
+  </compound>
+  <compound refid="channel__sum_8h" kind="file"><name>channel_sum.h</name>
+  </compound>
+  <compound refid="image__utils_8cc" kind="file"><name>image_utils.cc</name>
+  </compound>
+  <compound refid="image__utils_8h" kind="file"><name>image_utils.h</name>
+  </compound>
+  <compound refid="text__layout__utils_8cc" kind="file"><name>text_layout_utils.cc</name>
+  </compound>
+  <compound refid="text__layout__utils_8h" kind="file"><name>text_layout_utils.h</name>
+  </compound>
+  <compound refid="window__utils_8cc" kind="file"><name>window_utils.cc</name>
+  </compound>
+  <compound refid="window__utils_8h" kind="file"><name>window_utils.h</name>
+  </compound>
+  <compound refid="x11__info_8cc" kind="file"><name>x11_info.cc</name>
+  </compound>
+  <compound refid="x11__info_8h" kind="file"><name>x11_info.h</name>
+  </compound>
+  <compound refid="dir_0647358a484e047d134d8db4c2e48a13" kind="dir"><name>src/backdrop_origin</name>
+  </compound>
+  <compound refid="dir_ed65a0c12b5e50264b5b15fcca59386f" kind="dir"><name>src/image_utils/channel_sum</name>
+  </compound>
+  <compound refid="dir_aa8ce4bb2beff2f249a019f97e6d508d" kind="dir"><name>src/backdrop_origin/connection</name>
+  </compound>
+  <compound refid="dir_98ca2cffd6b079a45db86b63e7cbb5df" kind="dir"><name>src/file_dialog_utils</name>
+  </compound>
+  <compound refid="dir_091a4c3f56671012ef0088bfb194b9f9" kind="dir"><name>src/image_utils</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_fd57b066ae6df75c31ad949ff830cd48" kind="dir"><name>src/text_layout_utils</name>
+  </compound>
+  <compound refid="dir_eca5b99db9fd3b26c35224ecfe0be349" kind="dir"><name>src/window_utils</name>
+  </compound>
+  <compound refid="dir_b81d3e965a818c7d21364038c34f4896" kind="dir"><name>src/x11_info</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

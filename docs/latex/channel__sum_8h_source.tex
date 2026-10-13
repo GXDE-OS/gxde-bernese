@@ -1,0 +1,58 @@
+\doxysection{channel\+\_\+sum.\+h}
+\hypertarget{channel__sum_8h_source}{}\label{channel__sum_8h_source}\index{src/image\_utils/channel\_sum/channel\_sum.h@{src/image\_utils/channel\_sum/channel\_sum.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2026\ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify\ it}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ any\ later\ version.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but\ WITHOUT}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of\ MERCHANTABILITY\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ See\ the\ GNU\ General\ Public\ License\ for}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ more\ details.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ along\ with}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ this\ program.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ IMAGE\_UTILS\_CHANNEL\_SUM\_CHANNEL\_SUM\_H\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ IMAGE\_UTILS\_CHANNEL\_SUM\_CHANNEL\_SUM\_H\_}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}QColor"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}QtGlobal"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }bernese\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }image\_utils\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }internal\ \{}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Sum\ premultiplied\ channels\ together\ to\ preserve\ color\ at\ transparent\ edges.}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum}{ChannelSum}}\ \{}
+\DoxyCodeLine{00030\ \ \ qint64\ red\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ qint64\ green\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ qint64\ blue\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ qint64\ alpha\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}{Accumulate}}(QRgb\ pixel,\ \textcolor{keywordtype}{int}\ weight)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ red\ +=\ weight\ *\ qRed(pixel);}
+\DoxyCodeLine{00043\ \ \ \ \ green\ +=\ weight\ *\ qGreen(pixel);}
+\DoxyCodeLine{00044\ \ \ \ \ blue\ +=\ weight\ *\ qBlue(pixel);}
+\DoxyCodeLine{00045\ \ \ \ \ alpha\ +=\ weight\ *\ qAlpha(pixel);}
+\DoxyCodeLine{00046\ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \ \ QRgb\ \mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}{Average}}(\textcolor{keywordtype}{int}\ sample\_count)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ qRgba(red\ /\ sample\_count,\ green\ /\ sample\_count,\ blue\ /\ sample\_count,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ alpha\ /\ sample\_count);}
+\DoxyCodeLine{00057\ \ \ \}}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\ \ \textcolor{comment}{//\ namespace\ internal}}
+\DoxyCodeLine{00061\ \}\ \ \textcolor{comment}{//\ namespace\ image\_utils}}
+\DoxyCodeLine{00062\ \}\ \ \textcolor{comment}{//\ namespace\ bernese}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ IMAGE\_UTILS\_CHANNEL\_SUM\_CHANNEL\_SUM\_H\_}}
+
+\end{DoxyCode}

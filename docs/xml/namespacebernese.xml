@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacebernese" kind="namespace" language="C++">
+    <compoundname>bernese</compoundname>
+    <innerclass refid="classbernese_1_1X11Info" prot="public">bernese::X11Info</innerclass>
+    <innernamespace refid="namespacebernese_1_1file__dialog__utils">bernese::file_dialog_utils</innernamespace>
+    <innernamespace refid="namespacebernese_1_1image__utils">bernese::image_utils</innernamespace>
+    <innernamespace refid="namespacebernese_1_1text__layout__utils">bernese::text_layout_utils</innernamespace>
+    <innernamespace refid="namespacebernese_1_1wayland">bernese::wayland</innernamespace>
+    <innernamespace refid="namespacebernese_1_1window__utils">bernese::window_utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/backdrop_origin/backdrop_origin.cc" line="34" column="1"/>
+  </compounddef>
+</doxygen>

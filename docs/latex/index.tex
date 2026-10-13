@@ -1,0 +1,12 @@
+\chapter{GXDE Bernese}
+\hypertarget{index}{}\label{index}\index{GXDE Bernese@{GXDE Bernese}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_autotoc_md1}
+Welcome to {\ttfamily gxde-\/bernese}, GXDE\textquotesingle{}s compatibility library that replaces direct Qt Private API with those public ones.\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Background Informaton}{Background Informaton}}\label{index_autotoc_md2}
+GXDE used linuxdeepin\textquotesingle{}s components heavily. Early Deepin source code (particularly during the DTK2 era) relied heavily on Qt private headers. The Qt private headers does NOT guarantee API stability, hence when Qt upgrades, those components might be also break.
+
+This issue becomes particularly acute now that we are supporting rolling-\/release distributions like Arch Linux\+: Arch Linux continuously updates its Qt version, leading to more frequent breakages.
+
+Every time a breaking change occurred, we had to rebuild all programs that included Qt private headers. Consequently, the new idea was to eliminate the applications\textquotesingle{} dependencies on Qt private APIs entirely—and that is how this library came into being.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Licensing}{Licensing}}\label{index_autotoc_md3}
+GXDE Bernese is licensed under {\itshape \href{./LICENSE}{\texttt{ GNU GENERAL PUBLIC LICENSE Version 3}}}. You may see the {\ttfamily LICENSE} file on the project repository. 
