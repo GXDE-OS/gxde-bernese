@@ -43,7 +43,7 @@ jobs:
           fi
 
       - name: Build Arch Linux package
-        run: sudo -u builder makepkg --syncdeps --noconfirm --cleanbuild
+        run: cd arch/ && sudo -u builder makepkg --syncdeps --noconfirm --cleanbuild
 
       - name: Upload package
         uses: actions/upload-artifact@v4
