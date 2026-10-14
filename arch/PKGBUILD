@@ -1,0 +1,44 @@
+pkgname=gxde-bernese-git
+_pkgname=gxde-bernese
+pkgver=1.0.0.r2.g863d2a3
+pkgrel=1
+pkgdesc='GXDE compatibility library using public Qt APIs (Qt 6)'
+arch=('x86_64' 'aarch64')
+url='https://github.com/GXDE-OS/gxde-bernese'
+license=('GPL-3.0-or-later')
+depends=('gcc-libs' 'glibc' 'libx11' 'libxcb' 'qt6-base')
+makedepends=('cmake' 'git' 'ninja' 'pkgconf')
+provides=("${_pkgname}=${pkgver}")
+conflicts=("${_pkgname}")
+
+source=()
+sha256sums=()
+
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+pkgver() {
+  cd "$(_srcroot)" || return
+  printf '1.0.0.r%s.g%s\n' "$(git rev-list --count HEAD)" \
+      "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cmake -S "$(_srcroot)" -B "${srcdir}/build" -G Ninja \
+      -DCMAKE_BUILD_TYPE=None \
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DCMAKE_INSTALL_LIBDIR=lib \
+      -DBERNESE_QT_MAJOR_VERSION=6 \
+      -DBUILD_TESTING=ON
+  cmake --build "${srcdir}/build"
+}
+
+check() {
+  QT_QPA_PLATFORM=offscreen ctest --test-dir "${srcdir}/build" \
+      --output-on-failure
+}
+
+package() {
+  DESTDIR="${pkgdir}" cmake --install "${srcdir}/build"
+}
