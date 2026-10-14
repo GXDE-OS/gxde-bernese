@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="dir_eca5b99db9fd3b26c35224ecfe0be349" kind="dir">
     <compoundname>src/window_utils</compoundname>
+    <innerfile refid="window__geometry_8cc">window_geometry.cc</innerfile>
+    <innerfile refid="window__geometry_8h">window_geometry.h</innerfile>
     <innerfile refid="window__utils_8cc">window_utils.cc</innerfile>
     <innerfile refid="window__utils_8h">window_utils.h</innerfile>
     <briefdescription>

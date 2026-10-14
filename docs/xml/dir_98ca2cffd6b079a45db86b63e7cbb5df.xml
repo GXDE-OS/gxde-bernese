@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="dir_98ca2cffd6b079a45db86b63e7cbb5df" kind="dir">
     <compoundname>src/file_dialog_utils</compoundname>
     <innerfile refid="file__dialog__utils_8cc">file_dialog_utils.cc</innerfile>

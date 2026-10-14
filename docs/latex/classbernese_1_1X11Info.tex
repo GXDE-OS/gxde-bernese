@@ -1,24 +1,26 @@
-\doxysection{bernese\+::X11\+Info Class Reference}
+\doxysection{bernese::X11\+Info Class Reference}
 \hypertarget{classbernese_1_1X11Info}{}\label{classbernese_1_1X11Info}\index{bernese::X11Info@{bernese::X11Info}}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static bool \mbox{\hyperlink{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe}{Is\+Platform\+X11}} ()
+static bool \doxymbox{\hyperlink{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe}{Is\+Platform\+X11}} ()
 \begin{DoxyCompactList}\small\item\em Check whether we\textquotesingle{}re using Qt XCB platform. \end{DoxyCompactList}\item 
-static Display \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4}{Get\+Display}} ()
+static Display \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4}{Get\+Display}} ()
 \begin{DoxyCompactList}\small\item\em Access the Xlib display connection. \end{DoxyCompactList}\item 
-static xcb\+\_\+connection\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434}{Get\+Connection}} ()
+static xcb\+\_\+connection\+\_\+t \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434}{Get\+Connection}} ()
 \begin{DoxyCompactList}\small\item\em Access the XCB connection we already have. \end{DoxyCompactList}\item 
-static Time \mbox{\hyperlink{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803}{Get\+Timestamp}} ()
+static Time \doxymbox{\hyperlink{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803}{Get\+Timestamp}} ()
 \begin{DoxyCompactList}\small\item\em Get an X server timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\label{classbernese_1_1X11Info_doc-func-members}
+\Hypertarget{classbernese_1_1X11Info_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434}\label{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434} 
-\index{bernese::X11Info@{bernese::X11Info}!GetConnection@{GetConnection}}
+\Hypertarget{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434}\index{bernese::X11Info@{bernese::X11Info}!GetConnection@{GetConnection}}
 \index{GetConnection@{GetConnection}!bernese::X11Info@{bernese::X11Info}}
 \doxysubsubsection{\texorpdfstring{GetConnection()}{GetConnection()}}
-{\footnotesize\ttfamily xcb\+\_\+connection\+\_\+t \texorpdfstring{$\ast$}{*} bernese\+::\+X11\+Info\+::\+Get\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classbernese_1_1X11Info_a31a324f635d8dbf18f2edca9bf210434} 
+xcb\+\_\+connection\+\_\+t \texorpdfstring{$\ast$}{*} bernese::\+\+X11\+Info::\+\+Get\+Connection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -33,11 +35,11 @@ Don\textquotesingle{}t shut down the connection manually!!
 \begin{DoxyReturn}{Returns}
 a XCB connection struct. 
 \end{DoxyReturn}
-\Hypertarget{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4}\label{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4} 
-\index{bernese::X11Info@{bernese::X11Info}!GetDisplay@{GetDisplay}}
+\Hypertarget{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4}\index{bernese::X11Info@{bernese::X11Info}!GetDisplay@{GetDisplay}}
 \index{GetDisplay@{GetDisplay}!bernese::X11Info@{bernese::X11Info}}
 \doxysubsubsection{\texorpdfstring{GetDisplay()}{GetDisplay()}}
-{\footnotesize\ttfamily Display \texorpdfstring{$\ast$}{*} bernese\+::\+X11\+Info\+::\+Get\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classbernese_1_1X11Info_aca576461c5dad7a8be9794ade9129aa4} 
+Display \texorpdfstring{$\ast$}{*} bernese::\+\+X11\+Info::\+\+Get\+Display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -52,11 +54,11 @@ Don\textquotesingle{}t shut down the connection manually!!
 \begin{DoxyReturn}{Returns}
 The display borrowed, or {\ttfamily nullptr} when fails. 
 \end{DoxyReturn}
-\Hypertarget{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803}\label{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803} 
-\index{bernese::X11Info@{bernese::X11Info}!GetTimestamp@{GetTimestamp}}
+\Hypertarget{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803}\index{bernese::X11Info@{bernese::X11Info}!GetTimestamp@{GetTimestamp}}
 \index{GetTimestamp@{GetTimestamp}!bernese::X11Info@{bernese::X11Info}}
 \doxysubsubsection{\texorpdfstring{GetTimestamp()}{GetTimestamp()}}
-{\footnotesize\ttfamily Time bernese\+::\+X11\+Info\+::\+Get\+Timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classbernese_1_1X11Info_a478cd7a80950b717e74bc6b25b770803} 
+Time bernese::\+\+X11\+Info::\+\+Get\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -68,11 +70,11 @@ Must be called on the Qt GUI thread
 \begin{DoxyReturn}{Returns}
 X11 Server timestamp, or can be XCB Current\+Time if failed. 
 \end{DoxyReturn}
-\Hypertarget{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe}\label{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe} 
-\index{bernese::X11Info@{bernese::X11Info}!IsPlatformX11@{IsPlatformX11}}
+\Hypertarget{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe}\index{bernese::X11Info@{bernese::X11Info}!IsPlatformX11@{IsPlatformX11}}
 \index{IsPlatformX11@{IsPlatformX11}!bernese::X11Info@{bernese::X11Info}}
 \doxysubsubsection{\texorpdfstring{IsPlatformX11()}{IsPlatformX11()}}
-{\footnotesize\ttfamily bool bernese\+::\+X11\+Info\+::\+Is\+Platform\+X11 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classbernese_1_1X11Info_ab88c5253d7b84b251a2c23cddaf7bdbe} 
+bool bernese::\+\+X11\+Info::\+\+Is\+Platform\+X11 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -86,7 +88,7 @@ True when we\textquotesingle{}re using X11 platform.
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-src/x11\+\_\+info/x11\+\_\+info.\+h\item 
-src/x11\+\_\+info/x11\+\_\+info.\+cc\end{DoxyCompactItemize}
+src/\+x11\+\_\+info/x11\+\_\+info.\+h\item 
+src/\+x11\+\_\+info/x11\+\_\+info.\+cc\end{DoxyCompactItemize}

@@ -30,20 +30,20 @@
 \DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }internal\ \{}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ \textcolor{comment}{//\ Sum\ premultiplied\ channels\ together\ to\ preserve\ color\ at\ transparent\ edges.}}
-\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum}{ChannelSum}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum}{ChannelSum}}\ \{}
 \DoxyCodeLine{00030\ \ \ qint64\ red\ =\ 0;}
 \DoxyCodeLine{00031\ \ \ qint64\ green\ =\ 0;}
 \DoxyCodeLine{00032\ \ \ qint64\ blue\ =\ 0;}
 \DoxyCodeLine{00033\ \ \ qint64\ alpha\ =\ 0;}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}{Accumulate}}(QRgb\ pixel,\ \textcolor{keywordtype}{int}\ weight)\ \{}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}{Accumulate}}(QRgb\ pixel,\ \textcolor{keywordtype}{int}\ weight)\ \{}
 \DoxyCodeLine{00042\ \ \ \ \ red\ +=\ weight\ *\ qRed(pixel);}
 \DoxyCodeLine{00043\ \ \ \ \ green\ +=\ weight\ *\ qGreen(pixel);}
 \DoxyCodeLine{00044\ \ \ \ \ blue\ +=\ weight\ *\ qBlue(pixel);}
 \DoxyCodeLine{00045\ \ \ \ \ alpha\ +=\ weight\ *\ qAlpha(pixel);}
 \DoxyCodeLine{00046\ \ \ \}}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00054\ \ \ QRgb\ \mbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}{Average}}(\textcolor{keywordtype}{int}\ sample\_count)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00054\ \ \ QRgb\ \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}{Average}}(\textcolor{keywordtype}{int}\ sample\_count)\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ qRgba(red\ /\ sample\_count,\ green\ /\ sample\_count,\ blue\ /\ sample\_count,}
 \DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ alpha\ /\ sample\_count);}
 \DoxyCodeLine{00057\ \ \ \}}

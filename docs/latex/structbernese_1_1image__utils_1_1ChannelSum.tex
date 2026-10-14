@@ -1,0 +1,69 @@
+\doxysection{bernese::image\+\_\+utils::Channel\+Sum Struct Reference}
+\hypertarget{structbernese_1_1image__utils_1_1ChannelSum}{}\label{structbernese_1_1image__utils_1_1ChannelSum}\index{bernese::image\_utils::ChannelSum@{bernese::image\_utils::ChannelSum}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}{Accumulate}} (QRgb pixel, int weight)
+\begin{DoxyCompactList}\small\item\em Add or subtract one premultiplied pixel from the running sum. \end{DoxyCompactList}\item 
+QRgb \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}{Average}} (int sample\+\_\+count) const
+\begin{DoxyCompactList}\small\item\em Compute the averaged premultiplied pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_a6ef6cbe56a57d8af624c4bda0a6250f7}\label{structbernese_1_1image__utils_1_1ChannelSum_a6ef6cbe56a57d8af624c4bda0a6250f7} 
+qint64 {\bfseries red} = 0
+\item 
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_ab628a9975edc6db60d37b16e6ea6b23a}\label{structbernese_1_1image__utils_1_1ChannelSum_ab628a9975edc6db60d37b16e6ea6b23a} 
+qint64 {\bfseries green} = 0
+\item 
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_ac8d7d515648015926d4de78935965c77}\label{structbernese_1_1image__utils_1_1ChannelSum_ac8d7d515648015926d4de78935965c77} 
+qint64 {\bfseries blue} = 0
+\item 
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_a00811457d9698f19d65cc3acb1f8276f}\label{structbernese_1_1image__utils_1_1ChannelSum_a00811457d9698f19d65cc3acb1f8276f} 
+qint64 {\bfseries alpha} = 0
+\end{DoxyCompactItemize}
+
+
+\label{structbernese_1_1image__utils_1_1ChannelSum_doc-func-members}
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}\index{bernese::image\_utils::ChannelSum@{bernese::image\_utils::ChannelSum}!Accumulate@{Accumulate}}
+\index{Accumulate@{Accumulate}!bernese::image\_utils::ChannelSum@{bernese::image\_utils::ChannelSum}}
+\doxysubsubsection{\texorpdfstring{Accumulate()}{Accumulate()}}
+{\footnotesize\ttfamily \label{structbernese_1_1image__utils_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c} 
+void \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ab3a1a4083e269143253f7a0928a61a3c}{bernese::\+image\+\_\+utils::\+internal::\+\+Channel\+Sum::\+\+Accumulate}} (\begin{DoxyParamCaption}\item[{QRgb}]{pixel}{, }\item[{int}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add or subtract one premultiplied pixel from the running sum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixel} & Premultiplied pixel channels. \\
+\hline
+{\em weight} & Use 1 to add or -\/1 to remove a sample. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{structbernese_1_1image__utils_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}\index{bernese::image\_utils::ChannelSum@{bernese::image\_utils::ChannelSum}!Average@{Average}}
+\index{Average@{Average}!bernese::image\_utils::ChannelSum@{bernese::image\_utils::ChannelSum}}
+\doxysubsubsection{\texorpdfstring{Average()}{Average()}}
+{\footnotesize\ttfamily \label{structbernese_1_1image__utils_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8} 
+QRgb \doxymbox{\hyperlink{structbernese_1_1image__utils_1_1internal_1_1ChannelSum_ace944c7b170bfb2e5ebe37e1ab3aaec8}{bernese::\+image\+\_\+utils::\+internal::\+\+Channel\+Sum::\+\+Average}} (\begin{DoxyParamCaption}\item[{int}]{sample\+\_\+count}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the averaged premultiplied pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sample\+\_\+count} & Positive number of samples represented by the sum. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Packed averaged channels. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/\+image\+\_\+utils/\+channel\+\_\+sum/channel\+\_\+sum.\+h\end{DoxyCompactItemize}

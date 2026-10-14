@@ -28,7 +28,7 @@ bernese::X11Info
 .in -1c
 .SH "Member Function Documentation"
 .PP 
-.SS "xcb_connection_t * bernese::X11Info::GetConnection ()\fC [static]\fP"
+.SS "xcb_connection_t * bernese::X11Info::GetConnection ()\fR [static]\fP"
 
 .PP
 Access the XCB connection we already have\&. 
@@ -49,7 +49,7 @@ a XCB connection struct\&.
 .RE
 .PP
 
-.SS "Display * bernese::X11Info::GetDisplay ()\fC [static]\fP"
+.SS "Display * bernese::X11Info::GetDisplay ()\fR [static]\fP"
 
 .PP
 Access the Xlib display connection\&. 
@@ -66,11 +66,11 @@ Don't shut down the connection manually!!
 .PP
 \fBReturns\fP
 .RS 4
-The display borrowed, or \fCnullptr\fP when fails\&. 
+The display borrowed, or \fRnullptr\fP when fails\&. 
 .RE
 .PP
 
-.SS "Time bernese::X11Info::GetTimestamp ()\fC [static]\fP"
+.SS "Time bernese::X11Info::GetTimestamp ()\fR [static]\fP"
 
 .PP
 Get an X server timestamp\&. 
@@ -86,14 +86,14 @@ X11 Server timestamp, or can be XCB CurrentTime if failed\&.
 .RE
 .PP
 
-.SS "bool bernese::X11Info::IsPlatformX11 ()\fC [static]\fP"
+.SS "bool bernese::X11Info::IsPlatformX11 ()\fR [static]\fP"
 
 .PP
 Check whether we're using Qt XCB platform\&. 
 .PP
 \fBNote\fP
 .RS 4
-Note that \fCXCB\fP, \fCD-XCB\fP, and \fCXWayland\fP all counts\&. 
+Note that \fRXCB\fP, \fRD-XCB\fP, and \fRXWayland\fP all counts\&. 
 .RE
 .PP
 \fBReturns\fP

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="image__utils_8cc" kind="file" language="C++">
     <compoundname>image_utils.cc</compoundname>
     <includes refid="image__utils_8h" local="yes">image_utils/image_utils.h</includes>
@@ -76,6 +76,7 @@
         <label>bernese/export.h</label>
       </node>
     </incdepgraph>
+    <innerclass refid="structbernese_1_1image__utils_1_1ChannelSum" prot="public">bernese::image_utils::ChannelSum</innerclass>
     <innernamespace refid="namespacebernese">bernese</innernamespace>
     <innernamespace refid="namespacebernese_1_1image__utils">bernese::image_utils</innernamespace>
     <briefdescription>
@@ -114,7 +115,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">bernese<sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">image_utils<sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">internal::ChannelSum;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kindref="compound">internal::ChannelSum</ref>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
@@ -142,20 +143,20 @@
 <codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sample_count<sp/>=<sp/>2<sp/>*<sp/>radius<sp/>+<sp/>1;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line_index<sp/>=<sp/>0;<sp/>line_index<sp/>&lt;<sp/>line_count;<sp/>++line_index)<sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>ChannelSum<sp/>sum;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kindref="compound">ChannelSum</ref><sp/>sum;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position<sp/>=<sp/>-radius;<sp/>position<sp/>&lt;=<sp/>radius;<sp/>++position)<sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.Accumulate(SampleClamped(source,<sp/>line_index,<sp/>position,<sp/>axis),<sp/>1);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.<ref refid="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" kindref="member">Accumulate</ref>(SampleClamped(source,<sp/>line_index,<sp/>position,<sp/>axis),<sp/>1);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position<sp/>=<sp/>0;<sp/>position<sp/>&lt;<sp/>line_length;<sp/>++position)<sp/>{</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>vertical<sp/>?<sp/>line_index<sp/>:<sp/>position;</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>vertical<sp/>?<sp/>position<sp/>:<sp/>line_index;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>pixels<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">QRgb*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(target.scanLine(y));</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pixels[x]<sp/>=<sp/>sum.Average(sample_count);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pixels[x]<sp/>=<sp/>sum.<ref refid="structbernese_1_1image__utils_1_1ChannelSum_1ace944c7b170bfb2e5ebe37e1ab3aaec8" kindref="member">Average</ref>(sample_count);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.Accumulate(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.<ref refid="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" kindref="member">Accumulate</ref>(</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SampleClamped(source,<sp/>line_index,<sp/>position<sp/>-<sp/>radius,<sp/>axis),<sp/>-1);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.Accumulate(</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum.<ref refid="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" kindref="member">Accumulate</ref>(</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SampleClamped(source,<sp/>line_index,<sp/>position<sp/>+<sp/>radius<sp/>+<sp/>1,<sp/>axis),<sp/>1);</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>

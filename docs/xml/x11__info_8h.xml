@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="x11__info_8h" kind="file" language="C++">
     <compoundname>x11_info.h</compoundname>
     <includes local="yes">QGuiApplication</includes>
@@ -8,7 +8,7 @@
     <includes local="yes">xcb/xcb.h</includes>
     <includes local="yes">bernese/export.h</includes>
     <includedby refid="window__utils_8cc" local="yes">src/window_utils/window_utils.cc</includedby>
-    <includedby refid="x11__info_8cc" local="no">src/x11_info/x11_info.cc</includedby>
+    <includedby refid="x11__info_8cc" local="yes">src/x11_info/x11_info.cc</includedby>
     <incdepgraph>
       <node id="1">
         <label>src/x11_info/x11_info.h</label>
@@ -78,13 +78,13 @@
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30" refid="classbernese_1_1X11Info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BERNESE_EXPORT<sp/><ref refid="classbernese_1_1X11Info" kindref="compound">X11Info</ref><sp/>{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsPlatformX11();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classbernese_1_1X11Info_1ab88c5253d7b84b251a2c23cddaf7bdbe" kindref="member">IsPlatformX11</ref>();</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Display*<sp/>GetDisplay();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Display*<sp/><ref refid="classbernese_1_1X11Info_1aca576461c5dad7a8be9794ade9129aa4" kindref="member">GetDisplay</ref>();</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>xcb_connection_t*<sp/>GetConnection();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>xcb_connection_t*<sp/><ref refid="classbernese_1_1X11Info_1a31a324f635d8dbf18f2edca9bf210434" kindref="member">GetConnection</ref>();</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Time<sp/>GetTimestamp();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Time<sp/><ref refid="classbernese_1_1X11Info_1a478cd7a80950b717e74bc6b25b770803" kindref="member">GetTimestamp</ref>();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bernese</highlight><highlight class="normal"></highlight></codeline>

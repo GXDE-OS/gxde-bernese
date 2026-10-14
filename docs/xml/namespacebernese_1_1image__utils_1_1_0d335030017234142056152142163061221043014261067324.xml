@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324" kind="namespace" language="C++">
+    <compoundname>bernese::image_utils::@335030017234142056152142163061221043014261067324</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>BlurAxis</name>
+        <qualifiedname>bernese::image_utils::@335030017234142056152142163061221043014261067324::BlurAxis</qualifiedname>
+        <enumvalue id="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039a3d3bbb7767b92dd2ae2c7128cf66d2ca" prot="public">
+          <name>kHorizontal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039a04da8b9a72f74bff480c2858ffc1bc95" prot="public">
+          <name>kVertical</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/image_utils.cc" line="36" column="1" bodyfile="src/image_utils/image_utils.cc" bodystart="36" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/image_utils/image_utils.cc" line="34" column="1"/>
+  </compounddef>
+</doxygen>

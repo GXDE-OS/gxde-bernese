@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structbernese_1_1image__utils_1_1ChannelSum" kind="struct" language="C++" prot="public">
+    <compoundname>bernese::image_utils::ChannelSum</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbernese_1_1image__utils_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" prot="public" static="no" mutable="no">
+        <type>qint64</type>
+        <definition>qint64 bernese::image_utils::internal::ChannelSum::red</definition>
+        <argsstring></argsstring>
+        <name>red</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::red</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="30" column="10" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1image__utils_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" prot="public" static="no" mutable="no">
+        <type>qint64</type>
+        <definition>qint64 bernese::image_utils::internal::ChannelSum::green</definition>
+        <argsstring></argsstring>
+        <name>green</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::green</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="31" column="10" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1image__utils_1_1ChannelSum_1ac8d7d515648015926d4de78935965c77" prot="public" static="no" mutable="no">
+        <type>qint64</type>
+        <definition>qint64 bernese::image_utils::internal::ChannelSum::blue</definition>
+        <argsstring></argsstring>
+        <name>blue</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::blue</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="32" column="10" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1image__utils_1_1ChannelSum_1a00811457d9698f19d65cc3acb1f8276f" prot="public" static="no" mutable="no">
+        <type>qint64</type>
+        <definition>qint64 bernese::image_utils::internal::ChannelSum::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::alpha</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="33" column="10" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void bernese::image_utils::internal::ChannelSum::Accumulate</definition>
+        <argsstring>(QRgb pixel, int weight)</argsstring>
+        <name>Accumulate</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::Accumulate</qualifiedname>
+        <param>
+          <type>QRgb</type>
+          <declname>pixel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>Add or subtract one premultiplied pixel from the running sum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pixel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Premultiplied pixel channels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Use 1 to add or -1 to remove a sample. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="41" column="8" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structbernese_1_1image__utils_1_1ChannelSum_1ace944c7b170bfb2e5ebe37e1ab3aaec8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>QRgb</type>
+        <definition>QRgb bernese::image_utils::internal::ChannelSum::Average</definition>
+        <argsstring>(int sample_count) const</argsstring>
+        <name>Average</name>
+        <qualifiedname>bernese::image_utils::ChannelSum::Average</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>sample_count</declname>
+        </param>
+        <briefdescription>
+<para>Compute the averaged premultiplied pixel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sample_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Positive number of samples represented by the sum. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Packed averaged channels. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/image_utils/channel_sum/channel_sum.h" line="54" column="8" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="54" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/image_utils/channel_sum/channel_sum.h" line="29" column="1" bodyfile="src/image_utils/channel_sum/channel_sum.h" bodystart="29" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>Accumulate</name></member>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1a00811457d9698f19d65cc3acb1f8276f" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>alpha</name></member>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ace944c7b170bfb2e5ebe37e1ab3aaec8" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>Average</name></member>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ac8d7d515648015926d4de78935965c77" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>blue</name></member>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>green</name></member>
+      <member refid="structbernese_1_1image__utils_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" prot="public" virt="non-virtual"><scope>bernese::image_utils::ChannelSum</scope><name>red</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

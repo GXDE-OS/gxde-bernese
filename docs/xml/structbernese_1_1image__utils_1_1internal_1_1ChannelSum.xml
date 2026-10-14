@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kind="struct" language="C++" prot="public">
     <compoundname>bernese::image_utils::internal::ChannelSum</compoundname>
     <sectiondef kind="public-attrib">

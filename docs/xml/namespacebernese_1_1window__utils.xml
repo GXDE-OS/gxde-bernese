@@ -1,8 +1,209 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="namespacebernese_1_1window__utils" kind="namespace" language="C++">
     <compoundname>bernese::window_utils</compoundname>
     <sectiondef kind="func">
+      <memberdef kind="function" id="window__geometry_8cc_1ae537d420850b549c2d2d074f8d8d45ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QRect</type>
+        <definition>BERNESE_EXPORT QRect bernese::window_utils::ToNativePixels</definition>
+        <argsstring>(const QRect &amp;rect, const QPoint &amp;screen_origin, qreal scale)</argsstring>
+        <name>ToNativePixels</name>
+        <qualifiedname>bernese::window_utils::ToNativePixels</qualifiedname>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const QPoint &amp;</type>
+          <declname>screen_origin</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Converts a rectangle from logical pixels to native pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Scales the offset of <computeroutput>rect</computeroutput> from <computeroutput>screen_origin</computeroutput> by <computeroutput>scale</computeroutput>. Needed for high-DPI and multi-monitor setups.</para>
+<para><simplesect kind="note"><para>This is for X11. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screen_origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen origin (same in logical and native coords). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device pixel ratio, must be finite and &gt; 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rectangle in native pixels, or an empty QRect if <computeroutput>scale</computeroutput> is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_geometry.cc" line="27" column="7" bodyfile="src/window_utils/window_geometry.cc" bodystart="27" bodyend="39" declfile="src/window_utils/window_geometry.h" declline="45" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="window__geometry_8cc_1a19e22a334070c833bb243ed3cc1d4c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QRect</type>
+        <definition>BERNESE_EXPORT QRect bernese::window_utils::FromNativePixels</definition>
+        <argsstring>(const QRect &amp;rect, const QPoint &amp;screen_origin, qreal scale)</argsstring>
+        <name>FromNativePixels</name>
+        <qualifiedname>bernese::window_utils::FromNativePixels</qualifiedname>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <param>
+          <type>const QPoint &amp;</type>
+          <declname>screen_origin</declname>
+        </param>
+        <param>
+          <type>qreal</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Converts a rectangle from native pixels to logical pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inverse of ToNativePixels(). Implemented as ToNativePixels(rect, screen_origin, 1 / scale).</para>
+<para><simplesect kind="note"><para>This is for X11. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rectangle in native pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screen_origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen origin (same in native and logical coords). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device pixel ratio, must be finite and &gt; 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rectangle in logical pixels, or an empty QRect if <computeroutput>scale</computeroutput> is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_geometry.cc" line="41" column="7" bodyfile="src/window_utils/window_geometry.cc" bodystart="41" bodyend="48" declfile="src/window_utils/window_geometry.h" declline="61" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="window__geometry_8cc_1a116577f4858558df7da2859fba390465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QRect</type>
+        <definition>BERNESE_EXPORT QRect bernese::window_utils::NativeWindowGeometry</definition>
+        <argsstring>(const QWindow *window)</argsstring>
+        <name>NativeWindowGeometry</name>
+        <qualifiedname>bernese::window_utils::NativeWindowGeometry</qualifiedname>
+        <param>
+          <type>const QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Read a top-level window&apos;s client rectangle in X11 native pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses public Qt geometry and the window&apos;s own screen and pixel ratio. Call on the GUI thread. This does not create a platform window. Intended for X11 event coordinates and foreign windows; Wayland has no global window origin. Qt exposes integer logical geometry, so reconstructing native pixels can round boundaries that are not representable at the window&apos;s current scale. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Borrowed top-level window, which may be null. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Native rectangle, or an empty rectangle if window or screen is null. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_geometry.cc" line="50" column="7" bodyfile="src/window_utils/window_geometry.cc" bodystart="50" bodyend="57" declfile="src/window_utils/window_geometry.h" declline="75" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="window__geometry_8cc_1ae38f6f7263439ab660bd34cdec10a592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::window_utils::SetTopLevelGeometry</definition>
+        <argsstring>(QWidget *widget, QScreen *screen, const QRect &amp;rect)</argsstring>
+        <name>SetTopLevelGeometry</name>
+        <qualifiedname>bernese::window_utils::SetTopLevelGeometry</qualifiedname>
+        <param>
+          <type>QWidget *</type>
+          <declname>widget</declname>
+        </param>
+        <param>
+          <type>QScreen *</type>
+          <declname>screen</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Moves a top-level widget to a screen and sets its geometry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clamps the size to the widget&apos;s min/max size. Sets the geometry on both the QWidget and its QWindow; the QWindow call fixes stale native sizes after a screen or DPI change.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>widget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level widget. No-op if null or not a window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target screen, or null to keep the current screen. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New geometry in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_geometry.cc" line="59" column="6" bodyfile="src/window_utils/window_geometry.cc" bodystart="59" bodyend="85" declfile="src/window_utils/window_geometry.h" declline="88" declcolumn="21"/>
+      </memberdef>
       <memberdef kind="function" id="window__utils_8cc_1a9db1a9c6470b793e6e6856807000c7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Qt::Edges</type>
         <definition>BERNESE_EXPORT Qt::Edges bernese::window_utils::EdgesAt</definition>
@@ -474,6 +675,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/window_utils/window_utils.cc" line="44" column="1"/>
+    <location file="src/window_utils/window_geometry.cc" line="25" column="1"/>
   </compounddef>
 </doxygen>

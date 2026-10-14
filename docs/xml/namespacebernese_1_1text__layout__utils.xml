@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="namespacebernese_1_1text__layout__utils" kind="namespace" language="C++">
     <compoundname>bernese::text_layout_utils</compoundname>
     <sectiondef kind="func">
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/text_layout_utils/text_layout_utils.cc" line="212" column="6" bodyfile="src/text_layout_utils/text_layout_utils.cc" bodystart="212" bodyend="361" declfile="src/text_layout_utils/text_layout_utils.h" declline="78" declcolumn="21"/>
+        <location file="src/text_layout_utils/text_layout_utils.cc" line="212" column="6" bodyfile="src/text_layout_utils/text_layout_utils.cc" bodystart="212" bodyend="360" declfile="src/text_layout_utils/text_layout_utils.h" declline="78" declcolumn="21"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

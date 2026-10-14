@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="channel__sum_8h" kind="file" language="C++">
     <compoundname>channel_sum.h</compoundname>
     <includes local="yes">QColor</includes>
@@ -58,7 +58,7 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">internal<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sum<sp/>premultiplied<sp/>channels<sp/>together<sp/>to<sp/>preserve<sp/>color<sp/>at<sp/>transparent<sp/>edges.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kindref="compound">ChannelSum</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structbernese_1_1image__utils_1_1ChannelSum" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kindref="compound">ChannelSum</ref><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/>qint64<sp/>red<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/>qint64<sp/>green<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/>qint64<sp/>blue<sp/>=<sp/>0;</highlight></codeline>

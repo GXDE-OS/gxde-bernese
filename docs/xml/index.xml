@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="structbernese_1_1image__utils_1_1ChannelSum" kind="struct"><name>bernese::image_utils::ChannelSum</name>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" kind="variable"><name>red</name></member>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" kind="variable"><name>green</name></member>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ac8d7d515648015926d4de78935965c77" kind="variable"><name>blue</name></member>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1a00811457d9698f19d65cc3acb1f8276f" kind="variable"><name>alpha</name></member>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ab3a1a4083e269143253f7a0928a61a3c" kind="function"><name>Accumulate</name></member>
+    <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ace944c7b170bfb2e5ebe37e1ab3aaec8" kind="function"><name>Average</name></member>
+  </compound>
   <compound refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum" kind="struct"><name>bernese::image_utils::internal::ChannelSum</name>
     <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" kind="variable"><name>red</name></member>
     <member refid="structbernese_1_1image__utils_1_1internal_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" kind="variable"><name>green</name></member>
@@ -27,28 +35,32 @@
     <member refid="image__utils_8cc_1a068af6f71090c40b5cea67f2c1d19783" kind="function"><name>ScaledAssetPath</name></member>
     <member refid="image__utils_8cc_1a635e58d2d1ada72f844cce6f8a330323" kind="function"><name>Blur</name></member>
   </compound>
-  <compound refid="namespacebernese_1_1image__utils_1_1_0d6" kind="namespace"><name>bernese::image_utils::@6</name>
-    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6" kind="enum"><name>BlurAxis</name></member>
-    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6a3d3bbb7767b92dd2ae2c7128cf66d2ca" kind="enumvalue"><name>kHorizontal</name></member>
-    <member refid="namespacebernese_1_1image__utils_1_1_0d6_1a670051aa1edc2dfa3c2be65b7b9af7b6a04da8b9a72f74bff480c2858ffc1bc95" kind="enumvalue"><name>kVertical</name></member>
+  <compound refid="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324" kind="namespace"><name>bernese::image_utils::@335030017234142056152142163061221043014261067324</name>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039" kind="enum"><name>BlurAxis</name></member>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039a3d3bbb7767b92dd2ae2c7128cf66d2ca" kind="enumvalue"><name>kHorizontal</name></member>
+    <member refid="namespacebernese_1_1image__utils_1_1_0d335030017234142056152142163061221043014261067324_1a68ede52406c47750904c3fb07b8a0039a04da8b9a72f74bff480c2858ffc1bc95" kind="enumvalue"><name>kVertical</name></member>
   </compound>
   <compound refid="namespacebernese_1_1image__utils_1_1internal" kind="namespace"><name>bernese::image_utils::internal</name>
   </compound>
   <compound refid="namespacebernese_1_1text__layout__utils" kind="namespace"><name>bernese::text_layout_utils</name>
     <member refid="text__layout__utils_8cc_1a6b110302e9f2026963091d190c8cad01" kind="function"><name>DrawElidedText</name></member>
   </compound>
-  <compound refid="namespacebernese_1_1text__layout__utils_1_1_0d8" kind="namespace"><name>bernese::text_layout_utils::@8</name>
+  <compound refid="namespacebernese_1_1text__layout__utils_1_1_0d106103076337246170320127040264050101057111321217" kind="namespace"><name>bernese::text_layout_utils::@106103076337246170320127040264050101057111321217</name>
   </compound>
   <compound refid="namespacebernese_1_1wayland" kind="namespace"><name>bernese::wayland</name>
     <member refid="backdrop__origin_8cc_1adb27027fe6dfa512a272bcdb1e810706" kind="function"><name>LogicalWorkArea</name></member>
     <member refid="backdrop__origin_8cc_1af4e586bca26a483b706c92622fc5bfe3" kind="function"><name>XwaylandWorkArea</name></member>
     <member refid="backdrop__origin_8cc_1a8887f0141b843f883289ac5d5047f0a9" kind="function"><name>BackdropOrigin</name></member>
   </compound>
-  <compound refid="namespacebernese_1_1wayland_1_1_0d0" kind="namespace"><name>bernese::wayland::@0</name>
+  <compound refid="namespacebernese_1_1wayland_1_1_0d036375314000027304257371150113014227306012373103" kind="namespace"><name>bernese::wayland::@036375314000027304257371150113014227306012373103</name>
   </compound>
   <compound refid="namespacebernese_1_1wayland_1_1internal" kind="namespace"><name>bernese::wayland::internal</name>
   </compound>
   <compound refid="namespacebernese_1_1window__utils" kind="namespace"><name>bernese::window_utils</name>
+    <member refid="window__geometry_8cc_1ae537d420850b549c2d2d074f8d8d45ea" kind="function"><name>ToNativePixels</name></member>
+    <member refid="window__geometry_8cc_1a19e22a334070c833bb243ed3cc1d4c16" kind="function"><name>FromNativePixels</name></member>
+    <member refid="window__geometry_8cc_1a116577f4858558df7da2859fba390465" kind="function"><name>NativeWindowGeometry</name></member>
+    <member refid="window__geometry_8cc_1ae38f6f7263439ab660bd34cdec10a592" kind="function"><name>SetTopLevelGeometry</name></member>
     <member refid="window__utils_8cc_1a9db1a9c6470b793e6e6856807000c7d7" kind="function"><name>EdgesAt</name></member>
     <member refid="window__utils_8cc_1a37fe905863bed7f1110a7dd01e4cb815" kind="function"><name>MoveWindow</name></member>
     <member refid="window__utils_8cc_1a04b7cf185d1d19441b42031e872ea5d3" kind="function"><name>ResizeWindow</name></member>
@@ -84,6 +96,10 @@
   <compound refid="text__layout__utils_8cc" kind="file"><name>text_layout_utils.cc</name>
   </compound>
   <compound refid="text__layout__utils_8h" kind="file"><name>text_layout_utils.h</name>
+  </compound>
+  <compound refid="window__geometry_8cc" kind="file"><name>window_geometry.cc</name>
+  </compound>
+  <compound refid="window__geometry_8h" kind="file"><name>window_geometry.h</name>
   </compound>
   <compound refid="window__utils_8cc" kind="file"><name>window_utils.cc</name>
   </compound>
