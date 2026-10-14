@@ -268,6 +268,18 @@ class BerneseTest : public QObject {
     QVERIFY(lines.isEmpty());
   }
 
+  void LayoutBoundsOnly() {
+    const QFont font("Sans Serif", 12);
+    QTextLayout layout("short", font);
+    QList<QRectF> regions;
+    bernese::text_layout_utils::DrawElidedText(&layout, {1000, 1000},
+        QTextOption::NoWrap, Qt::ElideNone, 0, 0, nullptr, nullptr, {}, {},
+        {}, Qt::NoBrush, 0, &regions);
+    QCOMPARE(regions.size(), 1);
+    QVERIFY(regions.first().width() > 0);
+    QCOMPARE(regions.first().height(), QFontMetricsF(font).height());
+  }
+
   /** @brief Verify inline objects survive text elision and painting. */
   void InlineTags() {
     for (int line_count : {1, 2, 5}) {

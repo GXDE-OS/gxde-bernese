@@ -215,8 +215,7 @@ void DrawElidedText(QTextLayout* layout, const QSizeF& size,
     const QColor& shadow_color, const QPointF& shadow_offset,
     const QBrush& background, qreal background_radius,
     QList<QRectF>* bounding_region, QTextDocument* document) {
-  if (size.width() <= 0 || size.height() <= 0 || layout == nullptr ||
-      lines == nullptr || painter == nullptr || document == nullptr) {
+  if (size.width() <= 0 || size.height() <= 0 || layout == nullptr) {
     return;
   }
 
