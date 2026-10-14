@@ -1,3 +1,9 @@
+gxde-bernese (1.0.0-gxde2) unstable; urgency=medium
+
+  * Now manuals install alongside the software.
+
+ -- Char0fString <root@charofstring.cc>  Tue, 13 Oct 2026 19:20:02 -0500
+
 gxde-bernese (1.0.0-gxde1) unstable; urgency=medium
 
   * Initial packaging.
