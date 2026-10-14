@@ -127,6 +127,12 @@ install(FILES ${PROJECT_SOURCE_DIR}/LICENSE
   DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/gxde-bernese
 )
 
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/docs/man/
+  DESTINATION ${CMAKE_INSTALL_MANDIR}
+  COMPONENT Documentation
+  FILES_MATCHING PATTERN "*.3"
+)
+
 # Distribution copies are not used to compile the library or tests.
 # This target runs with the default build, but bernese does not depend on it.
 add_custom_target(dist-headers ALL
