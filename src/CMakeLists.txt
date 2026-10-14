@@ -21,6 +21,7 @@ set(bernese_public_headers
   ${CMAKE_CURRENT_SOURCE_DIR}/text_layout_utils/text_layout_utils.h
   ${CMAKE_CURRENT_SOURCE_DIR}/file_dialog_utils/file_dialog_utils.h
   ${CMAKE_CURRENT_SOURCE_DIR}/x11_info/x11_info.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/window_utils/window_geometry.h
   ${CMAKE_CURRENT_SOURCE_DIR}/window_utils/window_utils.h
   ${CMAKE_CURRENT_SOURCE_DIR}/backdrop_origin/backdrop_origin.h
 )
@@ -32,6 +33,7 @@ add_library(bernese SHARED
   text_layout_utils/text_layout_utils.cc
   file_dialog_utils/file_dialog_utils.cc
   x11_info/x11_info.cc
+  window_utils/window_geometry.cc
   window_utils/window_utils.cc
   backdrop_origin/backdrop_origin.cc
 )

@@ -18,8 +18,6 @@
 // Must load the Qt types before Xlib defines macros.
 #include "x11_info/x11_info.h"
 
-#include <qlatin1stringview.h>
-
 #include <QGuiApplication>
 #include <QString>
 

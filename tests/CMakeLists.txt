@@ -70,3 +70,30 @@ if(Python3_Interpreter_FOUND)
     USES_TERMINAL
   )
 endif()
+
+add_executable(bernese-window-geometry-tests
+  window_geometry_test.cc
+)
+
+set_target_properties(bernese-window-geometry-tests PROPERTIES AUTOMOC ON)
+
+target_link_libraries(bernese-window-geometry-tests
+  PRIVATE bernese ${QT_PACKAGE}::Test
+)
+
+add_test(NAME window-geometry
+  COMMAND bernese-window-geometry-tests
+)
+
+set_tests_properties(window-geometry PROPERTIES
+  ENVIRONMENT "QT_QPA_PLATFORM=offscreen;QT_SCALE_FACTOR=2"
+)
+
+if(BERNESE_QT_MAJOR_VERSION STREQUAL "6" AND
+    Qt6_VERSION VERSION_GREATER_EQUAL "6.10"
+)
+  add_test(NAME window-geometry-multiscreen
+    COMMAND bernese-window-geometry-tests CrossScreenGeometry)
+  set_tests_properties(window-geometry-multiscreen PROPERTIES
+    ENVIRONMENT "QT_QPA_PLATFORM=offscreen:configfile=${CMAKE_CURRENT_SOURCE_DIR}/screens.json;QT_SCALE_FACTOR=1;QT_QPA_OFFSCREEN_NO_GLX=1")
+endif()
