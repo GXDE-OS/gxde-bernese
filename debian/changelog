@@ -1,3 +1,9 @@
+gxde-bernese (1.0.1-gxde1) unstable; urgency=medium
+
+  * Added window geometry utils.
+
+ -- Char0fString <root@charofstring.cc>  Wed, 14 Oct 2026 18:15:13 -0500
+
 gxde-bernese (1.0.0-gxde3) unstable; urgency=medium
 
   * Fixed build issues.
