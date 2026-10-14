@@ -15,6 +15,9 @@
  * this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+// Must load the Qt types before Xlib defines macros.
+#include "x11_info/x11_info.h"
+
 #include <qlatin1stringview.h>
 
 #include <QGuiApplication>
@@ -23,8 +26,6 @@
 #include <X11/Xatom.h>
 #include <X11/Xlib.h>
 #include <xcb/xcb.h>
-
-#include <x11_info/x11_info.h>
 
 namespace bernese {
 
