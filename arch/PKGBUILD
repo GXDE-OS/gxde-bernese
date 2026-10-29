@@ -1,6 +1,6 @@
 pkgname=gxde-bernese-git
 _pkgname=gxde-bernese
-pkgver=1.0.2
+pkgver=1.0.3
 pkgrel=1
 
 pkgdesc='GXDE compatibility library using public Qt APIs (Qt 6)'
