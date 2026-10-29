@@ -7,6 +7,7 @@ Name: gxde-bernese-qt@BERNESE_QT_MAJOR_VERSION@
 Description: GXDE compatibility helpers implemented with public Qt APIs
 Version: @PROJECT_VERSION@
 Requires: Qt@BERNESE_QT_MAJOR_VERSION@Core Qt@BERNESE_QT_MAJOR_VERSION@Gui Qt@BERNESE_QT_MAJOR_VERSION@Widgets x11 xcb
+Requires.private: wayland-client
 Libs.private: -lX11 -lxcb -lxcb-randr
 Libs: -L${libdir} -lgxde-bernese-qt@BERNESE_QT_MAJOR_VERSION@
 Cflags: -I${includedir}

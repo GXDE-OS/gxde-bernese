@@ -14,7 +14,7 @@
 # this program. If not, see <https://www.gnu.org/licenses/>.
 
 cmake_minimum_required(VERSION 3.16)
-project(gxde-bernese VERSION 0.1.1 LANGUAGES CXX)
+project(gxde-bernese VERSION 0.1.1 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -32,6 +32,11 @@ find_package(X11 REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(XCB REQUIRED IMPORTED_TARGET xcb)
 pkg_check_modules(XCB_RANDR REQUIRED IMPORTED_TARGET xcb-randr)
+pkg_check_modules(WAYLAND_CLIENT REQUIRED IMPORTED_TARGET wayland-client)
+pkg_get_variable(WAYLAND_SCANNER wayland-scanner wayland_scanner)
+if(NOT WAYLAND_SCANNER)
+  find_program(WAYLAND_SCANNER wayland-scanner REQUIRED)
+endif()
 
 include(GNUInstallDirs)
 include(CTest)

@@ -2,7 +2,7 @@ Source: gxde-bernese
 Section: libs
 Priority: optional
 Maintainer: Char0fString <root@charofstring.cc>
-Build-Depends: debhelper-compat (= 13), cmake, pkg-config, qt6-base-dev, libx11-dev, libxcb1-dev, libxcb-randr0-dev
+Build-Depends: debhelper-compat (= 13), cmake, pkg-config, qt6-base-dev, libx11-dev, libxcb1-dev, libxcb-randr0-dev, libwayland-dev, libwayland-bin
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
 

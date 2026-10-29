@@ -22,11 +22,31 @@ set(bernese_public_headers
   ${CMAKE_CURRENT_SOURCE_DIR}/file_dialog_utils/file_dialog_utils.h
   ${CMAKE_CURRENT_SOURCE_DIR}/x11_info/x11_info.h
   ${CMAKE_CURRENT_SOURCE_DIR}/window_utils/window_geometry.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/window_utils/window_stack.h
   ${CMAKE_CURRENT_SOURCE_DIR}/window_utils/window_utils.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/window_effects/window_effects.h
   ${CMAKE_CURRENT_SOURCE_DIR}/backdrop_origin/backdrop_origin.h
 )
 
 set(bernese_public_headers ${bernese_public_headers} PARENT_SCOPE)
+
+set(protocol_dir ${CMAKE_CURRENT_BINARY_DIR}/wayland/protocols)
+set(protocol_sources)
+
+foreach(protocol IN ITEMS blur dde-shell)
+  set(xml ${CMAKE_CURRENT_SOURCE_DIR}/window_effects/protocols/${protocol}.xml)
+  set(header ${protocol_dir}/${protocol}-client-protocol.h)
+  set(code ${protocol_dir}/${protocol}-protocol.c)
+  add_custom_command(
+    OUTPUT ${header} ${code}
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${protocol_dir}
+    COMMAND ${WAYLAND_SCANNER} client-header ${xml} ${header}
+    COMMAND ${WAYLAND_SCANNER} private-code ${xml} ${code}
+    DEPENDS ${xml}
+    VERBATIM
+  )
+  list(APPEND protocol_sources ${header} ${code})
+endforeach()
 
 add_library(bernese SHARED
   image_utils/image_utils.cc
@@ -34,8 +54,12 @@ add_library(bernese SHARED
   file_dialog_utils/file_dialog_utils.cc
   x11_info/x11_info.cc
   window_utils/window_geometry.cc
+  window_utils/window_stack.cc
   window_utils/window_utils.cc
+  window_effects/window_effects.cc
+  window_effects/wayland_effects.cc
   backdrop_origin/backdrop_origin.cc
+  ${protocol_sources}
 )
 add_library(GxdeBernese::Qt${BERNESE_QT_MAJOR_VERSION} ALIAS bernese)
 
@@ -62,6 +86,8 @@ target_include_directories(bernese PUBLIC
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/gxde-bernese-qt${BERNESE_QT_MAJOR_VERSION}>
 )
 
+target_include_directories(bernese PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/wayland)
+
 target_compile_features(bernese PUBLIC cxx_std_20)
 target_link_libraries(bernese
   PUBLIC
@@ -72,6 +98,7 @@ target_link_libraries(bernese
     PkgConfig::XCB
   PRIVATE
     PkgConfig::XCB_RANDR
+    PkgConfig::WAYLAND_CLIENT
 )
 
 set(package GxdeBerneseQt${BERNESE_QT_MAJOR_VERSION})

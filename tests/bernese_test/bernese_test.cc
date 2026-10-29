@@ -41,6 +41,8 @@
 #include "image_utils/image_utils.h"
 #include "tag_object/tag_object.h"
 #include "text_layout_utils/text_layout_utils.h"
+#include "window_effects/window_effects.h"
+#include "window_utils/window_stack.h"
 #include "window_utils/window_utils.h"
 #include "x11_info/x11_info.h"
 
@@ -343,6 +345,64 @@ class BerneseTest : public QObject {
                  directory.filePath("icon@2x.png"), 2, &scale),
         directory.filePath("icon@2x.png"));
     QCOMPARE(scale, 2.0);
+  }
+
+  /** @brief Blur works on X11 only for hidden windows, never for null. */
+  void BlurBehindHints() {
+    QWindow window;
+    window.resize(100, 100);
+    const bool x11 = bernese::X11Info::IsPlatformX11();
+    QCOMPARE(bernese::window_effects::SetBlurBehind(&window), x11);
+    QCOMPARE(bernese::window_effects::SetBlurBehind(
+                 &window, {QRect(0, 0, 50, 50)}, 8),
+        x11);
+    QCOMPARE(bernese::window_effects::ClearBlurBehind(&window), x11);
+    QVERIFY(!bernese::window_effects::SetBlurBehind(nullptr));
+    QVERIFY(!bernese::window_effects::ClearBlurBehind(nullptr));
+    QVERIFY(!bernese::window_effects::SetWindowRadius(nullptr, 1));
+    // A window that was never shown has no Wayland surface.
+    QVERIFY(!bernese::window_effects::SetWindowRadius(&window, 1));
+
+    // No window manager to ask off X11 and Wayland.
+    if (!x11 && QGuiApplication::platformName() != "wayland") {
+      QVERIFY(!bernese::window_effects::HasCompositingManager());
+      QVERIFY(!bernese::window_effects::IsBlurBehindSupported());
+    }
+  }
+
+  /** @brief Wayland blur can be set again after hide and show. */
+  void WaylandBlur() {
+    if (QGuiApplication::platformName() != "wayland") {
+      QSKIP("Needs the Wayland platform plugin.");
+    }
+
+    const bool supported = bernese::window_effects::IsBlurBehindSupported();
+    QWindow window;
+    window.resize(100, 100);
+    for (int round = 0; round < 2; ++round) {
+      window.show();
+      QVERIFY(QTest::qWaitForWindowExposed(&window));
+      QCOMPARE(bernese::window_effects::SetBlurBehind(&window), supported);
+      QCOMPARE(bernese::window_effects::SetBlurBehind(
+                   &window, {QRect(0, 0, 50, 50)}),
+          supported);
+      bernese::window_effects::SetWindowRadius(&window, 1);
+      QCOMPARE(bernese::window_effects::ClearBlurBehind(&window), supported);
+      window.hide();
+    }
+  }
+
+  /** @brief Window lookup off X11 and outside every screen. */
+  void WindowClassAtPoint() {
+    if (!bernese::X11Info::IsPlatformX11()) {
+      QVERIFY(bernese::window_utils::TopLevelWindowClassAt(QPoint(0, 0))
+                  .isEmpty());
+    }
+
+    // No window is this far from every screen.
+    QVERIFY(bernese::window_utils::TopLevelWindowClassAt(
+        QPoint(-1000000, -1000000))
+                .isEmpty());
   }
 
   /** @brief Verify border cursor selection and window-state transitions. */

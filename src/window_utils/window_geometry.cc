@@ -84,5 +84,20 @@ void SetTopLevelGeometry(
   }
 }
 
+void SetTopLevelWindowGeometry(
+    QWindow* window, QScreen* screen, const QRect& rect) {
+  if (!window || window->parent()) {
+    return;
+  }
+
+  if (screen) {
+    window->setScreen(screen);
+  }
+
+  window->setGeometry(QRect(rect.topLeft(),
+      rect.size().boundedTo(window->maximumSize())
+          .expandedTo(window->minimumSize())));
+}
+
 }  // namespace window_utils
 }  // namespace bernese

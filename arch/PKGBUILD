@@ -7,7 +7,7 @@ pkgdesc='GXDE compatibility library using public Qt APIs (Qt 6)'
 arch=('x86_64' 'aarch64')
 url='https://github.com/GXDE-OS/gxde-bernese'
 license=('GPL-3.0-or-later')
-depends=('gcc-libs' 'glibc' 'libx11' 'libxcb' 'qt6-base')
+depends=('gcc-libs' 'glibc' 'libx11' 'libxcb' 'qt6-base' 'wayland')
 makedepends=('cmake' 'git' 'ninja' 'pkgconf')
 provides=("${_pkgname}=${pkgver}")
 conflicts=("${_pkgname}")

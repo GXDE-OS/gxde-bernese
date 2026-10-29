@@ -102,6 +102,23 @@ class WindowGeometryTest : public QObject {
     window_utils::SetTopLevelGeometry(nullptr, nullptr, {});
   }
 
+  /** @brief Plain windows get the same clamping as widgets. */
+  void WindowOverload() {
+    QWindow window;
+    window.setMinimumSize(QSize(100, 200));
+    window.setMaximumSize(QSize(400, 600));
+    window_utils::SetTopLevelWindowGeometry(
+        &window, window.screen(), QRect(10, 20, 800, 50));
+    QCOMPARE(window.geometry(), QRect(10, 20, 400, 200));
+
+    QWindow child(&window);
+    const QRect old_rect = child.geometry();
+    window_utils::SetTopLevelWindowGeometry(
+        &child, nullptr, QRect(1, 2, 30, 40));
+    QCOMPARE(child.geometry(), old_rect);
+    window_utils::SetTopLevelWindowGeometry(nullptr, nullptr, {});
+  }
+
   /** @brief Preserve width while moving across screens with different DPI. */
   void CrossScreenGeometry() {
     if (QGuiApplication::screens().size() != 3) {

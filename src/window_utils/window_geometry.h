@@ -88,6 +88,19 @@ BERNESE_EXPORT QRect NativeWindowGeometry(const QWindow* window);
 BERNESE_EXPORT void SetTopLevelGeometry(
     QWidget* widget, QScreen* screen, const QRect& rect);
 
+/**
+ * @brief Moves a top-level window to a screen and sets its geometry.
+ *
+ * QWindow version of SetTopLevelGeometry(), for windows with no widget,
+ * like QQuickWindow. The size stays within the min and max size.
+ *
+ * @param window Top-level window. No-op if null or if it has a parent.
+ * @param screen Target screen, or null to keep the current screen.
+ * @param rect   New geometry in logical pixels.
+ */
+BERNESE_EXPORT void SetTopLevelWindowGeometry(
+    QWindow* window, QScreen* screen, const QRect& rect);
+
 }  // namespace window_utils
 }  // namespace bernese
 
