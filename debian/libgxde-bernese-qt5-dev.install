@@ -1,0 +1,4 @@
+usr/include/gxde-bernese-qt5/
+usr/lib/*/libgxde-bernese-qt5.so
+usr/lib/*/cmake/GxdeBerneseQt5/
+usr/lib/*/pkgconfig/gxde-bernese-qt5.pc
