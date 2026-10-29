@@ -1,3 +1,9 @@
+gxde-bernese (1.0.2-gxde1) unstable; urgency=medium
+
+  * Added Qt private modules alternative for DTK2Widget-Qt6.
+
+ -- Char0fString <root@charofstring.cc>  Wed, 28 Oct 2026 20:57:03 -0500
+
 gxde-bernese (1.0.1-gxde1) unstable; urgency=medium
 
   * Added window geometry utils.
