@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1window__effects" kind="namespace" language="C++">
+    <compoundname>bernese::window_effects</compoundname>
+    <innernamespace refid="namespacebernese_1_1window__effects_1_1internal">bernese::window_effects::internal</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="window__effects_8cc_1a2cb9b9403bf4a2be9f51e795fa36c770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::SetBlurBehind</definition>
+        <argsstring>(QWindow *window, const QList&lt; QRect &gt; &amp;areas={}, int radius=0)</argsstring>
+        <name>SetBlurBehind</name>
+        <qualifiedname>bernese::window_effects::SetBlurBehind</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const QList&lt; QRect &gt; &amp;</type>
+          <declname>areas</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Blur what is behind a window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>On X11 this writes the same window hints that D-XCB writes for DBlurEffectWidget, so any QWindow can have the blur without DTK. It writes the Deepin hint and the KDE hint, for Deepin WM, Flake WM and KWin.</para>
+<para>On Wayland this uses the org_kde_kwin_blur protocol, like DBlurEffectWidget. The blur goes away when the window is hidden, so call this again after each show. It works from the next frame, and the areas have square corners.</para>
+<para>Call on the GUI thread. On X11 this creates the native window if needed. On Wayland the window must be shown. The window needs an alpha channel. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>areas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Areas to blur, in logical pixels in the window. Empty means the whole window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corner radius of the areas, in logical pixels. X11 only. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the blur was sent. False on other platforms, for a null window, or on Wayland when the window is hidden or the compositor has no blur. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="180" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="180" bodyend="212" declfile="src/window_effects/window_effects.h" declline="52" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__effects_8cc_1a62e3452923690cc846d5547eb86974b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::ClearBlurBehind</definition>
+        <argsstring>(QWindow *window)</argsstring>
+        <name>ClearBlurBehind</name>
+        <qualifiedname>bernese::window_effects::ClearBlurBehind</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Remove the blur set by SetBlurBehind(). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call on the GUI thread. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the blur was removed. False on other platforms, for a null window, or when the window has no native window or surface. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="214" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="214" bodyend="234" declfile="src/window_effects/window_effects.h" declline="63" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__effects_8cc_1ae053d8f79d50444d6fcf205611dd4340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::SetWindowRadius</definition>
+        <argsstring>(QWindow *window, int radius)</argsstring>
+        <name>SetWindowRadius</name>
+        <qualifiedname>bernese::window_effects::SetWindowRadius</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Set the corner radius the Wayland compositor draws for a window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the dde_shell window radius that DBlurEffectWidget sets on Wayland. Treeland reads 0 as &quot;use the default&quot;, so use 1 for a square window.</para>
+<para>Call on the GUI thread after the window is shown, and again after each show, like SetBlurBehind(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corner radius in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the radius was sent. False off Wayland, for a null or hidden window, or when the compositor has no dde_shell. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="236" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="236" bodyend="238" declfile="src/window_effects/window_effects.h" declline="79" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__effects_8cc_1a8c1eb13618c53e7a71a4481cca8f7143" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::SetNoTitleBar</definition>
+        <argsstring>(QWindow *window, bool no_title_bar)</argsstring>
+        <name>SetNoTitleBar</name>
+        <qualifiedname>bernese::window_effects::SetNoTitleBar</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>no_title_bar</declname>
+        </param>
+        <briefdescription>
+<para>Ask the Wayland compositor not to draw a title bar for a window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>no_title_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to remove the title bar, false to bring it back. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the request was sent. False otherwise (or not Wayland). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="240" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="240" bodyend="242" declfile="src/window_effects/window_effects.h" declline="88" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__effects_8cc_1a2f75ecab9cb31e5063f28099f675b3ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::HasCompositingManager</definition>
+        <argsstring>()</argsstring>
+        <name>HasCompositingManager</name>
+        <qualifiedname>bernese::window_effects::HasCompositingManager</qualifiedname>
+        <briefdescription>
+<para>Check whether an X11 compositing manager is running. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the D-XCB &quot;hasComposite&quot; platform function. It checks the owner of the _NET_WM_CM_Sn selection of the default screen.</para>
+<para>Call on the GUI thread. <simplesect kind="return"><para>True when the selection has an owner. False off X11. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="244" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="244" bodyend="270" declfile="src/window_effects/window_effects.h" declline="99" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__effects_8cc_1aca8f971d3a630e437008c4488d53b7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::window_effects::IsBlurBehindSupported</definition>
+        <argsstring>()</argsstring>
+        <name>IsBlurBehindSupported</name>
+        <qualifiedname>bernese::window_effects::IsBlurBehindSupported</qualifiedname>
+        <briefdescription>
+<para>Check whether SetBlurBehind() has an effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces the D-XCB &quot;hasBlurWindow&quot; platform function. On X11, Deepin WM lists its blur atom in _NET_SUPPORTED, and KWin puts a property with the blur atom name on the root window. On Wayland the compositor must have org_kde_kwin_blur_manager.</para>
+<para>Call on the GUI thread. <simplesect kind="return"><para>True when blur works. False on other platforms. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/window_effects.cc" line="272" column="6" bodyfile="src/window_effects/window_effects.cc" bodystart="272" bodyend="294" declfile="src/window_effects/window_effects.h" declline="112" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/window_effects/wayland_effects.cc" line="46" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structbernese_1_1dbus__introspection_1_1Signal" kind="struct" language="C++" prot="public">
+    <compoundname>bernese::dbus_introspection::Signal</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Signal_1a69638e207848f1efc536dc3407216f84" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString bernese::dbus_introspection::Signal::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>bernese::dbus_introspection::Signal::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="54" column="11" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Signal_1abf909aff44a3fc2efe35ff512f9aaa45" prot="public" static="no" mutable="no">
+        <type>Arguments</type>
+        <definition>Arguments bernese::dbus_introspection::Signal::output_args</definition>
+        <argsstring></argsstring>
+        <name>output_args</name>
+        <qualifiedname>bernese::dbus_introspection::Signal::output_args</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="55" column="13" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Signal_1ac4533e5593d580daaee14662ee2379eb" prot="public" static="no" mutable="no">
+        <type>Annotations</type>
+        <definition>Annotations bernese::dbus_introspection::Signal::annotations</definition>
+        <argsstring></argsstring>
+        <name>annotations</name>
+        <qualifiedname>bernese::dbus_introspection::Signal::annotations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="56" column="15" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dbus_introspection/dbus_introspection.h" line="53" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="53" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structbernese_1_1dbus__introspection_1_1Signal_1ac4533e5593d580daaee14662ee2379eb" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Signal</scope><name>annotations</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Signal_1a69638e207848f1efc536dc3407216f84" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Signal</scope><name>name</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Signal_1abf909aff44a3fc2efe35ff512f9aaa45" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Signal</scope><name>output_args</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

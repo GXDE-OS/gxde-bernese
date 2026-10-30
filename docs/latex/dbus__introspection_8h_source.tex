@@ -1,0 +1,102 @@
+\doxysection{dbus\+\_\+introspection.\+h}
+\hypertarget{dbus__introspection_8h_source}{}\label{dbus__introspection_8h_source}\index{src/dbus\_introspection/dbus\_introspection.h@{src/dbus\_introspection/dbus\_introspection.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2026\ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify\ it}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ any\ later\ version.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but\ WITHOUT}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of\ MERCHANTABILITY\ or}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ See\ the\ GNU\ General\ Public\ License\ for}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ more\ details.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ along\ with}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ this\ program.\ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ DBUS\_INTROSPECTION\_DBUS\_INTROSPECTION\_H\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DBUS\_INTROSPECTION\_DBUS\_INTROSPECTION\_H\_}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}QList"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}QMap"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}QMultiMap"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}QSharedPointer"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}QString"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}bernese/export.h"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }bernese\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{namespace\ }dbus\_introspection\ \{}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Annotation\ values\ by\ annotation\ name.\ A\ later\ annotation\ with\ the\ same}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ name\ replaces\ the\ earlier\ one.}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{using\ }Annotations\ =\ QMap<QString,\ QString>;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ One\ argument\ of\ a\ method\ or\ a\ signal.}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1dbus__introspection_1_1Argument}{Argument}}\ \{}
+\DoxyCodeLine{00038\ \ \ QString\ type;\ \ \textcolor{comment}{//\ D-\/Bus\ type\ signature,\ like\ "{}a\{sv\}"{}.}}
+\DoxyCodeLine{00039\ \ \ QString\ name;\ \ \textcolor{comment}{//\ May\ be\ empty.}}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{using\ }Arguments\ =\ QList<Argument>;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ One\ method\ of\ an\ interface.}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1dbus__introspection_1_1Method}{Method}}\ \{}
+\DoxyCodeLine{00046\ \ \ QString\ name;}
+\DoxyCodeLine{00047\ \ \ Arguments\ input\_args;}
+\DoxyCodeLine{00048\ \ \ Arguments\ output\_args;}
+\DoxyCodeLine{00049\ \ \ Annotations\ annotations;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ One\ signal\ of\ an\ interface.\ Signals\ only\ have\ output\ arguments.}}
+\DoxyCodeLine{00053\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1dbus__introspection_1_1Signal}{Signal}}\ \{}
+\DoxyCodeLine{00054\ \ \ QString\ name;}
+\DoxyCodeLine{00055\ \ \ Arguments\ output\_args;}
+\DoxyCodeLine{00056\ \ \ Annotations\ annotations;}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ One\ property\ of\ an\ interface.}}
+\DoxyCodeLine{00060\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1dbus__introspection_1_1Property}{Property}}\ \{}
+\DoxyCodeLine{00061\ \ \ \textcolor{keyword}{enum\ class}\ Access\ \{\ kRead,\ kWrite,\ kReadWrite\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ QString\ name;}
+\DoxyCodeLine{00064\ \ \ QString\ type;\ \ \textcolor{comment}{//\ D-\/Bus\ type\ signature.}}
+\DoxyCodeLine{00065\ \ \ Access\ access\ =\ Access::kRead;}
+\DoxyCodeLine{00066\ \ \ Annotations\ annotations;}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{//\ One\ interface.\ The\ maps\ are\ sorted\ by\ member\ name.\ Overloaded\ methods\ and}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ signals\ share\ one\ name,\ so\ they\ use\ multi\ maps.}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structbernese_1_1dbus__introspection_1_1Interface}{Interface}}\ \{}
+\DoxyCodeLine{00072\ \ \ QString\ name;}
+\DoxyCodeLine{00073\ \ \ \textcolor{comment}{//\ The\ interface\ written\ back\ as\ XML,\ in\ the\ same\ text\ form\ that\ QtDBus}}
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{//\ makes.\ Generated\ adaptors\ store\ it\ in\ their\ D-\/Bus\ Introspection}}
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{//\ class\ info.}}
+\DoxyCodeLine{00076\ \ \ QString\ introspection;}
+\DoxyCodeLine{00077\ \ \ Annotations\ annotations;}
+\DoxyCodeLine{00078\ \ \ QMultiMap<QString,\ Method>\ methods;}
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ Not\ named\ "{}signals"{}\ because\ that\ word\ is\ a\ Qt\ keyword\ macro.}}
+\DoxyCodeLine{00080\ \ \ QMultiMap<QString,\ Signal>\ signal\_map;}
+\DoxyCodeLine{00081\ \ \ QMap<QString,\ Property>\ properties;}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ Interfaces\ by\ interface\ name.}}
+\DoxyCodeLine{00085\ \textcolor{keyword}{using\ }Interfaces\ =\ QMap<QString,\ QSharedPointer<const\ Interface>>;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00097\ BERNESE\_EXPORT\ Interfaces\ ParseInterfaces(\textcolor{keyword}{const}\ QString\&\ xml);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00108\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ IsValidMemberName(\textcolor{keyword}{const}\ QString\&\ name);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00119\ BERNESE\_EXPORT\ \textcolor{keywordtype}{bool}\ IsValidInterfaceName(\textcolor{keyword}{const}\ QString\&\ name);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \}\ \ \textcolor{comment}{//\ namespace\ dbus\_introspection}}
+\DoxyCodeLine{00122\ \}\ \ \textcolor{comment}{//\ namespace\ bernese}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ DBUS\_INTROSPECTION\_DBUS\_INTROSPECTION\_H\_}}
+
+\end{DoxyCode}

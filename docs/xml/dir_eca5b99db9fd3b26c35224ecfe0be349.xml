@@ -4,6 +4,8 @@
     <compoundname>src/window_utils</compoundname>
     <innerfile refid="window__geometry_8cc">window_geometry.cc</innerfile>
     <innerfile refid="window__geometry_8h">window_geometry.h</innerfile>
+    <innerfile refid="window__stack_8cc">window_stack.cc</innerfile>
+    <innerfile refid="window__stack_8h">window_stack.h</innerfile>
     <innerfile refid="window__utils_8cc">window_utils.cc</innerfile>
     <innerfile refid="window__utils_8h">window_utils.h</innerfile>
     <briefdescription>

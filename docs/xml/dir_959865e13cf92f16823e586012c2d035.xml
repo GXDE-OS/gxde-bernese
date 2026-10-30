@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_959865e13cf92f16823e586012c2d035" kind="dir">
+    <compoundname>src/dbus_introspection</compoundname>
+    <innerfile refid="dbus__introspection_8cc">dbus_introspection.cc</innerfile>
+    <innerfile refid="dbus__introspection_8h">dbus_introspection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dbus_introspection/"/>
+  </compounddef>
+</doxygen>

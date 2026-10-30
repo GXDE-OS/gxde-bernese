@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1platform__utils_1_1_0d026166365070024173116162261224234132002317232224" kind="namespace" language="C++">
+    <compoundname>bernese::platform_utils::@026166365070024173116162261224234132002317232224</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/platform_utils/platform_utils.cc" line="33" column="1"/>
+  </compounddef>
+</doxygen>

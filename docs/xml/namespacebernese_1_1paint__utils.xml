@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1paint__utils" kind="namespace" language="C++">
+    <compoundname>bernese::paint_utils</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="paint__utils_8cc_1a9fe35bad4fb7ca9c1f863b91c74bc87c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QImage</type>
+        <definition>BERNESE_EXPORT QImage bernese::paint_utils::CopyPaintedArea</definition>
+        <argsstring>(QPainter *painter, const QRect &amp;rect)</argsstring>
+        <name>CopyPaintedArea</name>
+        <qualifiedname>bernese::paint_utils::CopyPaintedArea</qualifiedname>
+        <param>
+          <type>QPainter *</type>
+          <declname>painter</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Copy pixels that are already painted on the device of a painter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In a widget paint event, the painter draws into the window backing store. This function reads what the window has painted there so far, for example the content under a widget that wants to blur it. It replaces QPlatformBackingStore::toImage().</para>
+<para><simplesect kind="note"><para>Call it while the painter is active, before you paint over the area. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>painter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active borrowed painter, for example one opened on a widget in its paint event. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Area in the logical coordinates of the painter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Copy in device pixels. Like QImage::copy(), parts outside the device are filled with zero bytes, which is transparent for formats with alpha. Its device pixel ratio is the one of the painted widget or image. Returns a null image when the painter is inactive or its device is neither a QImage nor a QPixmap. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/paint_utils/paint_utils.cc" line="30" column="8" bodyfile="src/paint_utils/paint_utils.cc" bodystart="30" bodyend="52" declfile="src/paint_utils/paint_utils.h" declline="48" declcolumn="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/paint_utils/paint_utils.cc" line="28" column="1"/>
+  </compounddef>
+</doxygen>

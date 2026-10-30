@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_d68cb26f61e8d87cb06651edae1129c0" kind="dir">
+    <compoundname>src/platform_utils</compoundname>
+    <innerfile refid="platform__utils_8cc">platform_utils.cc</innerfile>
+    <innerfile refid="platform__utils_8h">platform_utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/platform_utils/"/>
+  </compounddef>
+</doxygen>

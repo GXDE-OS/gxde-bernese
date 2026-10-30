@@ -204,6 +204,92 @@
         </inbodydescription>
         <location file="src/window_utils/window_geometry.cc" line="59" column="6" bodyfile="src/window_utils/window_geometry.cc" bodystart="59" bodyend="85" declfile="src/window_utils/window_geometry.h" declline="88" declcolumn="21"/>
       </memberdef>
+      <memberdef kind="function" id="window__geometry_8cc_1a75cca031041624e04f45ea783f2b2700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::window_utils::SetTopLevelWindowGeometry</definition>
+        <argsstring>(QWindow *window, QScreen *screen, const QRect &amp;rect)</argsstring>
+        <name>SetTopLevelWindowGeometry</name>
+        <qualifiedname>bernese::window_utils::SetTopLevelWindowGeometry</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>QScreen *</type>
+          <declname>screen</declname>
+        </param>
+        <param>
+          <type>const QRect &amp;</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+<para>Moves a top-level window to a screen and sets its geometry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>QWindow version of SetTopLevelGeometry(), for windows with no widget, like QQuickWindow. The size stays within the min and max size.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Top-level window. No-op if null or if it has a parent. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>screen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target screen, or null to keep the current screen. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New geometry in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_geometry.cc" line="87" column="6" bodyfile="src/window_utils/window_geometry.cc" bodystart="87" bodyend="100" declfile="src/window_utils/window_geometry.h" declline="101" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="window__stack_8cc_1a2a5dd4333dc6a94784cf3cd3c18201da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QStringList</type>
+        <definition>BERNESE_EXPORT QStringList bernese::window_utils::TopLevelWindowClassAt</definition>
+        <argsstring>(const QPoint &amp;native_pos)</argsstring>
+        <name>TopLevelWindowClassAt</name>
+        <qualifiedname>bernese::window_utils::TopLevelWindowClassAt</qualifiedname>
+        <param>
+          <type>const QPoint &amp;</type>
+          <declname>native_pos</declname>
+        </param>
+        <briefdescription>
+<para>Get the WM_CLASS of the top visible window at a point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Replaces DWindowManagerHelper::currentWorkspaceWindows(), which needs D-XCB. It goes through _NET_CLIENT_LIST_STACKING from the top and skips windows that are not mapped, so other workspaces do not count.</para>
+<para>Call on the GUI thread. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>native_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point in native X11 root coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance name and class name from WM_CLASS. Empty when no window is there, it has no WM_CLASS, or off X11. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_utils/window_stack.cc" line="149" column="13" bodyfile="src/window_utils/window_stack.cc" bodystart="149" bodyend="184" declfile="src/window_utils/window_stack.h" declline="41" declcolumn="28"/>
+      </memberdef>
       <memberdef kind="function" id="window__utils_8cc_1a9db1a9c6470b793e6e6856807000c7d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Qt::Edges</type>
         <definition>BERNESE_EXPORT Qt::Edges bernese::window_utils::EdgesAt</definition>

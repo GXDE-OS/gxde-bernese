@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_242e321cdd870ef0ffe7683b958c0dd8" kind="dir">
+    <compoundname>src/tab_bar_utils</compoundname>
+    <innerfile refid="tab__bar__utils_8cc">tab_bar_utils.cc</innerfile>
+    <innerfile refid="tab__bar__utils_8h">tab_bar_utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tab_bar_utils/"/>
+  </compounddef>
+</doxygen>

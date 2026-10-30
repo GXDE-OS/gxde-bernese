@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structbernese_1_1dbus__introspection_1_1Interface" kind="struct" language="C++" prot="public">
+    <compoundname>bernese::dbus_introspection::Interface</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1a5c5ba6505ac8a6ce27edf6f53729e0ca" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString bernese::dbus_introspection::Interface::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="72" column="11" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1a21a939f0b4720496b5ec14b4d00d1d4a" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString bernese::dbus_introspection::Interface::introspection</definition>
+        <argsstring></argsstring>
+        <name>introspection</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::introspection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="76" column="11" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1af5b29db2b55b86f2e72307780c330a99" prot="public" static="no" mutable="no">
+        <type>Annotations</type>
+        <definition>Annotations bernese::dbus_introspection::Interface::annotations</definition>
+        <argsstring></argsstring>
+        <name>annotations</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::annotations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="77" column="15" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1a0f9c7d600dac6545f54868ce3d0236e6" prot="public" static="no" mutable="no">
+        <type>QMultiMap&lt; QString, <ref refid="structbernese_1_1dbus__introspection_1_1Method" kindref="compound">Method</ref> &gt;</type>
+        <definition>QMultiMap&lt;QString, Method&gt; bernese::dbus_introspection::Interface::methods</definition>
+        <argsstring></argsstring>
+        <name>methods</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::methods</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="78" column="13" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1a5c397784e80a38039755759fd826a377" prot="public" static="no" mutable="no">
+        <type>QMultiMap&lt; QString, <ref refid="structbernese_1_1dbus__introspection_1_1Signal" kindref="compound">Signal</ref> &gt;</type>
+        <definition>QMultiMap&lt;QString, Signal&gt; bernese::dbus_introspection::Interface::signal_map</definition>
+        <argsstring></argsstring>
+        <name>signal_map</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::signal_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="80" column="13" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Interface_1aaeca52ce8bc5ca3eb47edad4a33c1045" prot="public" static="no" mutable="no">
+        <type>QMap&lt; QString, <ref refid="structbernese_1_1dbus__introspection_1_1Property" kindref="compound">Property</ref> &gt;</type>
+        <definition>QMap&lt;QString, Property&gt; bernese::dbus_introspection::Interface::properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <qualifiedname>bernese::dbus_introspection::Interface::properties</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="81" column="8" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dbus_introspection/dbus_introspection.h" line="71" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="71" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1af5b29db2b55b86f2e72307780c330a99" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>annotations</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a21a939f0b4720496b5ec14b4d00d1d4a" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>introspection</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a0f9c7d600dac6545f54868ce3d0236e6" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>methods</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a5c5ba6505ac8a6ce27edf6f53729e0ca" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>name</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1aaeca52ce8bc5ca3eb47edad4a33c1045" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>properties</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a5c397784e80a38039755759fd826a377" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Interface</scope><name>signal_map</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

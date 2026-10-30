@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1window__effects_1_1_0d225130050131146250201112011142015103031056106024" kind="namespace" language="C++">
+    <compoundname>bernese::window_effects::@225130050131146250201112011142015103031056106024</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/window_effects/window_effects.cc" line="33" column="1"/>
+  </compounddef>
+</doxygen>

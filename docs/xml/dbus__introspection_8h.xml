@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dbus__introspection_8h" kind="file" language="C++">
+    <compoundname>dbus_introspection.h</compoundname>
+    <includes local="yes">QList</includes>
+    <includes local="yes">QMap</includes>
+    <includes local="yes">QMultiMap</includes>
+    <includes local="yes">QSharedPointer</includes>
+    <includes local="yes">QString</includes>
+    <includes local="yes">bernese/export.h</includes>
+    <includedby refid="dbus__introspection_8cc" local="yes">src/dbus_introspection/dbus_introspection.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/dbus_introspection/dbus_introspection.h</label>
+        <link refid="dbus__introspection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QList</label>
+      </node>
+      <node id="3">
+        <label>QMap</label>
+      </node>
+      <node id="4">
+        <label>QMultiMap</label>
+      </node>
+      <node id="5">
+        <label>QSharedPointer</label>
+      </node>
+      <node id="6">
+        <label>QString</label>
+      </node>
+      <node id="7">
+        <label>bernese/export.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Argument" prot="public">bernese::dbus_introspection::Argument</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Method" prot="public">bernese::dbus_introspection::Method</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Signal" prot="public">bernese::dbus_introspection::Signal</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Property" prot="public">bernese::dbus_introspection::Property</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Interface" prot="public">bernese::dbus_introspection::Interface</innerclass>
+    <innernamespace refid="namespacebernese">bernese</innernamespace>
+    <innernamespace refid="namespacebernese_1_1dbus__introspection">bernese::dbus_introspection</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2026<sp/>CharOfString<sp/>&lt;root@charofstring.cc&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/>it</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/>but<sp/>WITHOUT</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/>MERCHANTABILITY<sp/>or</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/>See<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>along<sp/>with</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>this<sp/>program.<sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DBUS_INTROSPECTION_DBUS_INTROSPECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DBUS_INTROSPECTION_DBUS_INTROSPECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QList&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QMap&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QMultiMap&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QSharedPointer&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;QString&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;bernese/export.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">bernese<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">dbus_introspection<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Annotation<sp/>values<sp/>by<sp/>annotation<sp/>name.<sp/>A<sp/>later<sp/>annotation<sp/>with<sp/>the<sp/>same</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>name<sp/>replaces<sp/>the<sp/>earlier<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Annotations<sp/>=<sp/>QMap&lt;QString,<sp/>QString&gt;;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>One<sp/>argument<sp/>of<sp/>a<sp/>method<sp/>or<sp/>a<sp/>signal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structbernese_1_1dbus__introspection_1_1Argument" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1dbus__introspection_1_1Argument" kindref="compound">Argument</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>QString<sp/>type;<sp/><sp/></highlight><highlight class="comment">//<sp/>D-Bus<sp/>type<sp/>signature,<sp/>like<sp/>&quot;a{sv}&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>QString<sp/>name;<sp/><sp/></highlight><highlight class="comment">//<sp/>May<sp/>be<sp/>empty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Arguments<sp/>=<sp/>QList&lt;Argument&gt;;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>One<sp/>method<sp/>of<sp/>an<sp/>interface.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structbernese_1_1dbus__introspection_1_1Method" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1dbus__introspection_1_1Method" kindref="compound">Method</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>QString<sp/>name;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>Arguments<sp/>input_args;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>Arguments<sp/>output_args;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>Annotations<sp/>annotations;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>One<sp/>signal<sp/>of<sp/>an<sp/>interface.<sp/>Signals<sp/>only<sp/>have<sp/>output<sp/>arguments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structbernese_1_1dbus__introspection_1_1Signal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1dbus__introspection_1_1Signal" kindref="compound">Signal</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>QString<sp/>name;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>Arguments<sp/>output_args;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>Annotations<sp/>annotations;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>One<sp/>property<sp/>of<sp/>an<sp/>interface.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structbernese_1_1dbus__introspection_1_1Property" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1dbus__introspection_1_1Property" kindref="compound">Property</ref><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Access<sp/>{<sp/>kRead,<sp/>kWrite,<sp/>kReadWrite<sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>QString<sp/>name;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>QString<sp/>type;<sp/><sp/></highlight><highlight class="comment">//<sp/>D-Bus<sp/>type<sp/>signature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>Access<sp/>access<sp/>=<sp/>Access::kRead;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>Annotations<sp/>annotations;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>One<sp/>interface.<sp/>The<sp/>maps<sp/>are<sp/>sorted<sp/>by<sp/>member<sp/>name.<sp/>Overloaded<sp/>methods<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>signals<sp/>share<sp/>one<sp/>name,<sp/>so<sp/>they<sp/>use<sp/>multi<sp/>maps.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structbernese_1_1dbus__introspection_1_1Interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbernese_1_1dbus__introspection_1_1Interface" kindref="compound">Interface</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>QString<sp/>name;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>interface<sp/>written<sp/>back<sp/>as<sp/>XML,<sp/>in<sp/>the<sp/>same<sp/>text<sp/>form<sp/>that<sp/>QtDBus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>makes.<sp/>Generated<sp/>adaptors<sp/>store<sp/>it<sp/>in<sp/>their<sp/>D-Bus<sp/>Introspection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>class<sp/>info.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>QString<sp/>introspection;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>Annotations<sp/>annotations;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>QMultiMap&lt;QString,<sp/>Method&gt;<sp/>methods;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>named<sp/>&quot;signals&quot;<sp/>because<sp/>that<sp/>word<sp/>is<sp/>a<sp/>Qt<sp/>keyword<sp/>macro.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>QMultiMap&lt;QString,<sp/>Signal&gt;<sp/>signal_map;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>QMap&lt;QString,<sp/>Property&gt;<sp/>properties;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Interfaces<sp/>by<sp/>interface<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Interfaces<sp/>=<sp/>QMap&lt;QString,<sp/>QSharedPointer&lt;const<sp/>Interface&gt;&gt;;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">BERNESE_EXPORT<sp/>Interfaces<sp/>ParseInterfaces(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>xml);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">BERNESE_EXPORT<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsValidMemberName(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">BERNESE_EXPORT<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsValidInterfaceName(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dbus_introspection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>bernese</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>DBUS_INTROSPECTION_DBUS_INTROSPECTION_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/dbus_introspection/dbus_introspection.h"/>
+  </compounddef>
+</doxygen>

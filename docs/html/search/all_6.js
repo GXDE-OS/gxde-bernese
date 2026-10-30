@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x11info_0',['X11Info',['../classbernese_1_1X11Info.html',1,'bernese']]]
+  ['method_0',['Method',['../structbernese_1_1dbus__introspection_1_1Method.html',1,'bernese::dbus_introspection']]]
 ];

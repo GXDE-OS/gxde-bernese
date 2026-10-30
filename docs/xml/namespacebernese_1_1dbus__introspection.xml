@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1dbus__introspection" kind="namespace" language="C++">
+    <compoundname>bernese::dbus_introspection</compoundname>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Argument" prot="public">bernese::dbus_introspection::Argument</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Interface" prot="public">bernese::dbus_introspection::Interface</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Method" prot="public">bernese::dbus_introspection::Method</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Property" prot="public">bernese::dbus_introspection::Property</innerclass>
+    <innerclass refid="structbernese_1_1dbus__introspection_1_1Signal" prot="public">bernese::dbus_introspection::Signal</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dbus__introspection_8h_1a2bf8116c1bfdc076d02e775620f2f74f" prot="public" static="no">
+        <type>QMap&lt; QString, QString &gt;</type>
+        <definition>using bernese::dbus_introspection::Annotations = QMap&lt;QString, QString&gt;</definition>
+        <argsstring></argsstring>
+        <name>Annotations</name>
+        <qualifiedname>bernese::dbus_introspection::Annotations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="34" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dbus__introspection_8h_1ad43ad7e11caed8a424418da758d2c277" prot="public" static="no">
+        <type>QList&lt; <ref refid="structbernese_1_1dbus__introspection_1_1Argument" kindref="compound">Argument</ref> &gt;</type>
+        <definition>using bernese::dbus_introspection::Arguments = QList&lt;Argument&gt;</definition>
+        <argsstring></argsstring>
+        <name>Arguments</name>
+        <qualifiedname>bernese::dbus_introspection::Arguments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="42" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="dbus__introspection_8h_1ac829700f7f8704d04475a20157586398" prot="public" static="no">
+        <type>QMap&lt; QString, QSharedPointer&lt; const <ref refid="structbernese_1_1dbus__introspection_1_1Interface" kindref="compound">Interface</ref> &gt; &gt;</type>
+        <definition>using bernese::dbus_introspection::Interfaces = QMap&lt;QString, QSharedPointer&lt;const Interface&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>Interfaces</name>
+        <qualifiedname>bernese::dbus_introspection::Interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="85" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dbus__introspection_8cc_1a46a1e7d5ef9ce4b378d840a53779236d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Interfaces</type>
+        <definition>BERNESE_EXPORT Interfaces bernese::dbus_introspection::ParseInterfaces</definition>
+        <argsstring>(const QString &amp;xml)</argsstring>
+        <name>ParseInterfaces</name>
+        <qualifiedname>bernese::dbus_introspection::ParseInterfaces</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>xml</declname>
+        </param>
+        <briefdescription>
+<para>Read all interfaces from D-Bus introspection XML. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It replaces QDBusIntrospection::parseInterfaces() and gives the same members, in the same order, and the same introspection text. Bad parts are skipped silently, like QtDBus does when its debug log is off.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xml</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Introspection XML, with or without a root node element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parsed interfaces; empty if none are valid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.cc" line="316" column="12" bodyfile="src/dbus_introspection/dbus_introspection.cc" bodystart="316" bodyend="318" declfile="src/dbus_introspection/dbus_introspection.h" declline="97" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="dbus__introspection_8cc_1afb3833bbdb32472bcd7fe02c7e002b45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::dbus_introspection::IsValidMemberName</definition>
+        <argsstring>(const QString &amp;name)</argsstring>
+        <name>IsValidMemberName</name>
+        <qualifiedname>bernese::dbus_introspection::IsValidMemberName</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check a D-Bus member name, like &quot;GetAll&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It replaces QDBusUtil::isValidMemberName().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the name has 1 to 255 ASCII letters, digits or underscores and does not start with a digit. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.cc" line="320" column="6" bodyfile="src/dbus_introspection/dbus_introspection.cc" bodystart="320" bodyend="333" declfile="src/dbus_introspection/dbus_introspection.h" declline="108" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="dbus__introspection_8cc_1ad63fbf336b4e2ad02d40f40719357688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::dbus_introspection::IsValidInterfaceName</definition>
+        <argsstring>(const QString &amp;name)</argsstring>
+        <name>IsValidInterfaceName</name>
+        <qualifiedname>bernese::dbus_introspection::IsValidInterfaceName</qualifiedname>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check a D-Bus interface name, like &quot;org.freedesktop.DBus&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It replaces QDBusUtil::isValidInterfaceName().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the name is at most 255 characters and has two or more dot separated parts that are each a valid member name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.cc" line="335" column="6" bodyfile="src/dbus_introspection/dbus_introspection.cc" bodystart="335" bodyend="349" declfile="src/dbus_introspection/dbus_introspection.h" declline="119" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dbus_introspection/dbus_introspection.cc" line="28" column="1"/>
+  </compounddef>
+</doxygen>

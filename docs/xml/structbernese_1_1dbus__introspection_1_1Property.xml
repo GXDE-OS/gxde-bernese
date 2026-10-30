@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structbernese_1_1dbus__introspection_1_1Property" kind="struct" language="C++" prot="public">
+    <compoundname>bernese::dbus_introspection::Property</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Access</name>
+        <qualifiedname>bernese::dbus_introspection::Property::Access</qualifiedname>
+        <enumvalue id="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00a8604cf55a79d6bfdcb30f77d1622839b" prot="public">
+          <name>kRead</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00ad3ac0ba447a9859ad2db8e498056429f" prot="public">
+          <name>kWrite</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00af34c23f2eed93c9645e1aa681c77bec5" prot="public">
+          <name>kReadWrite</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="61" column="3" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Property_1a7dddb52ed48cc94f10adf2d2b9ef1f50" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString bernese::dbus_introspection::Property::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>bernese::dbus_introspection::Property::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="63" column="11" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Property_1ad643c28d76d209750a3f0a25af84aa52" prot="public" static="no" mutable="no">
+        <type>QString</type>
+        <definition>QString bernese::dbus_introspection::Property::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>bernese::dbus_introspection::Property::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="64" column="11" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Property_1a723ad7d3fe2ee347eff5a871583e4604" prot="public" static="no" mutable="no">
+        <type>Access</type>
+        <definition>Access bernese::dbus_introspection::Property::access</definition>
+        <argsstring></argsstring>
+        <name>access</name>
+        <qualifiedname>bernese::dbus_introspection::Property::access</qualifiedname>
+        <initializer>= Access::kRead</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="65" column="10" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbernese_1_1dbus__introspection_1_1Property_1ad96eff3b88ae62ffece6d0d97938acae" prot="public" static="no" mutable="no">
+        <type>Annotations</type>
+        <definition>Annotations bernese::dbus_introspection::Property::annotations</definition>
+        <argsstring></argsstring>
+        <name>annotations</name>
+        <qualifiedname>bernese::dbus_introspection::Property::annotations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dbus_introspection/dbus_introspection.h" line="66" column="15" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dbus_introspection/dbus_introspection.h" line="60" column="1" bodyfile="src/dbus_introspection/dbus_introspection.h" bodystart="60" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Property</scope><name>Access</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Property_1a723ad7d3fe2ee347eff5a871583e4604" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Property</scope><name>access</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad96eff3b88ae62ffece6d0d97938acae" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Property</scope><name>annotations</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Property_1a7dddb52ed48cc94f10adf2d2b9ef1f50" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Property</scope><name>name</name></member>
+      <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad643c28d76d209750a3f0a25af84aa52" prot="public" virt="non-virtual"><scope>bernese::dbus_introspection::Property</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

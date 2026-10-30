@@ -7,6 +7,8 @@
     <includes local="yes">X11/Xlib.h</includes>
     <includes local="yes">xcb/xcb.h</includes>
     <includes local="yes">bernese/export.h</includes>
+    <includedby refid="window__effects_8cc" local="yes">src/window_effects/window_effects.cc</includedby>
+    <includedby refid="window__stack_8cc" local="yes">src/window_utils/window_stack.cc</includedby>
     <includedby refid="window__utils_8cc" local="yes">src/window_utils/window_utils.cc</includedby>
     <includedby refid="x11__info_8cc" local="yes">src/x11_info/x11_info.cc</includedby>
     <incdepgraph>

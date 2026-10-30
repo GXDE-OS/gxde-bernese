@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1tab__bar__utils" kind="namespace" language="C++">
+    <compoundname>bernese::tab_bar_utils</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ScrollDirection</name>
+        <qualifiedname>bernese::tab_bar_utils::ScrollDirection</qualifiedname>
+        <enumvalue id="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93aa3d426ca44695e3526f85a129e059b7ff" prot="public">
+          <name>kTowardFirst</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93aa57f53fa6de8e50ca9cd9607ff84764bb" prot="public">
+          <name>kTowardLast</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tab_bar_utils/tab_bar_utils.h" line="31" column="1" bodyfile="src/tab_bar_utils/tab_bar_utils.h" bodystart="31" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="tab__bar__utils_8cc_1aaaea06ad6cb8c88ba443d75284ebc733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::tab_bar_utils::InitTabBarBaseOption</definition>
+        <argsstring>(QStyleOptionTabBarBase *option, const QTabBar *tab_bar)</argsstring>
+        <name>InitTabBarBaseOption</name>
+        <qualifiedname>bernese::tab_bar_utils::InitTabBarBaseOption</qualifiedname>
+        <param>
+          <type>QStyleOptionTabBarBase *</type>
+          <declname>option</declname>
+        </param>
+        <param>
+          <type>const QTabBar *</type>
+          <declname>tab_bar</declname>
+        </param>
+        <briefdescription>
+<para>Fill the style option that paints the base line of a tab bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use it in a QTabBar subclass that paints itself. It replaces QTabBarPrivate::initStyleBaseOption().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-null option to fill. The tab rectangles are not set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tab_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Non-null borrowed tab bar to read the state from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tab_bar_utils/tab_bar_utils.cc" line="47" column="6" bodyfile="src/tab_bar_utils/tab_bar_utils.cc" bodystart="47" bodyend="81" declfile="src/tab_bar_utils/tab_bar_utils.h" declline="45" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="tab__bar__utils_8cc_1ab817a688d59e66d5cdf144230c77f68f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QToolButton *</type>
+        <definition>BERNESE_EXPORT QToolButton * bernese::tab_bar_utils::ScrollButton</definition>
+        <argsstring>(const QTabBar *tab_bar, ScrollDirection direction)</argsstring>
+        <name>ScrollButton</name>
+        <qualifiedname>bernese::tab_bar_utils::ScrollButton</qualifiedname>
+        <param>
+          <type>const QTabBar *</type>
+          <declname>tab_bar</declname>
+        </param>
+        <param>
+          <type>ScrollDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Find a built-in scroll button of a tab bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Qt creates the buttons when the tab bar is built and names them &quot;ScrollLeftButton&quot; and &quot;ScrollRightButton&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tab_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Borrowed tab bar, which may be null. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which of the two buttons to return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Borrowed button owned by the tab bar, or null if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tab_bar_utils/tab_bar_utils.cc" line="83" column="13" bodyfile="src/tab_bar_utils/tab_bar_utils.cc" bodystart="83" bodyend="92" declfile="src/tab_bar_utils/tab_bar_utils.h" declline="58" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="tab__bar__utils_8cc_1a715a598ac2b8549b64fb225c303d92a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>BERNESE_EXPORT bool bernese::tab_bar_utils::ScrollTabs</definition>
+        <argsstring>(QTabBar *tab_bar, ScrollDirection direction)</argsstring>
+        <name>ScrollTabs</name>
+        <qualifiedname>bernese::tab_bar_utils::ScrollTabs</qualifiedname>
+        <param>
+          <type>QTabBar *</type>
+          <declname>tab_bar</declname>
+        </param>
+        <param>
+          <type>ScrollDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Scroll the tabs by one step, like a click on a scroll arrow. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The current tab does not change. This is the public way to move the private scroll offset of QTabBar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tab_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Borrowed tab bar, which may be null. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction to scroll in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the tabs moved. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tab_bar_utils/tab_bar_utils.cc" line="94" column="6" bodyfile="src/tab_bar_utils/tab_bar_utils.cc" bodystart="94" bodyend="104" declfile="src/tab_bar_utils/tab_bar_utils.h" declline="71" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="tab__bar__utils_8cc_1a9d9ea86ef4c8442befc6db08d1a02f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>BERNESE_EXPORT void bernese::tab_bar_utils::ScrollToTab</definition>
+        <argsstring>(QTabBar *tab_bar, int index)</argsstring>
+        <name>ScrollToTab</name>
+        <qualifiedname>bernese::tab_bar_utils::ScrollToTab</qualifiedname>
+        <param>
+          <type>QTabBar *</type>
+          <declname>tab_bar</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Scroll until a tab is fully inside the tab bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The current tab does not change. It replaces QTabBarPrivate::makeVisible().</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tab_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Borrowed tab bar, which may be null. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tab to show; invalid indexes do nothing. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tab_bar_utils/tab_bar_utils.cc" line="106" column="6" bodyfile="src/tab_bar_utils/tab_bar_utils.cc" bodystart="106" bodyend="137" declfile="src/tab_bar_utils/tab_bar_utils.h" declline="82" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tab_bar_utils/tab_bar_utils.cc" line="30" column="1"/>
+  </compounddef>
+</doxygen>

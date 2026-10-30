@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="structbernese_1_1dbus__introspection_1_1Argument" kind="struct"><name>bernese::dbus_introspection::Argument</name>
+    <member refid="structbernese_1_1dbus__introspection_1_1Argument_1a0271b3344c4410869e953f2fb36a9d79" kind="variable"><name>type</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Argument_1a82ab76e597eb0116c474f9a22ea3cd96" kind="variable"><name>name</name></member>
+  </compound>
   <compound refid="structbernese_1_1image__utils_1_1ChannelSum" kind="struct"><name>bernese::image_utils::ChannelSum</name>
     <member refid="structbernese_1_1image__utils_1_1ChannelSum_1a6ef6cbe56a57d8af624c4bda0a6250f7" kind="variable"><name>red</name></member>
     <member refid="structbernese_1_1image__utils_1_1ChannelSum_1ab628a9975edc6db60d37b16e6ea6b23a" kind="variable"><name>green</name></member>
@@ -20,6 +24,35 @@
     <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1ae9c1d0120c3a7ad7f67210251459ad8e" kind="variable"><name>screen</name></member>
     <member refid="structbernese_1_1wayland_1_1internal_1_1Connection_1a04c40bc7fb00b039507d851354902e04" kind="variable"><name>value</name></member>
   </compound>
+  <compound refid="structbernese_1_1dbus__introspection_1_1Interface" kind="struct"><name>bernese::dbus_introspection::Interface</name>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a5c5ba6505ac8a6ce27edf6f53729e0ca" kind="variable"><name>name</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a21a939f0b4720496b5ec14b4d00d1d4a" kind="variable"><name>introspection</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1af5b29db2b55b86f2e72307780c330a99" kind="variable"><name>annotations</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a0f9c7d600dac6545f54868ce3d0236e6" kind="variable"><name>methods</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1a5c397784e80a38039755759fd826a377" kind="variable"><name>signal_map</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Interface_1aaeca52ce8bc5ca3eb47edad4a33c1045" kind="variable"><name>properties</name></member>
+  </compound>
+  <compound refid="structbernese_1_1dbus__introspection_1_1Method" kind="struct"><name>bernese::dbus_introspection::Method</name>
+    <member refid="structbernese_1_1dbus__introspection_1_1Method_1af66ed2a1d87eb9a409687188e79dc2c0" kind="variable"><name>name</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Method_1a7a527d0add0aa01cc86e29602e6bde96" kind="variable"><name>input_args</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Method_1a2dc16c77ed3649cab196edf04cfaf1c8" kind="variable"><name>output_args</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Method_1ab186da1d64e5bee2ad99947ce9dd96b6" kind="variable"><name>annotations</name></member>
+  </compound>
+  <compound refid="structbernese_1_1dbus__introspection_1_1Property" kind="struct"><name>bernese::dbus_introspection::Property</name>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00" kind="enum"><name>Access</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00a8604cf55a79d6bfdcb30f77d1622839b" kind="enumvalue"><name>kRead</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00ad3ac0ba447a9859ad2db8e498056429f" kind="enumvalue"><name>kWrite</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad422289fb3f7472ab600cbf00ecdcb00af34c23f2eed93c9645e1aa681c77bec5" kind="enumvalue"><name>kReadWrite</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1a7dddb52ed48cc94f10adf2d2b9ef1f50" kind="variable"><name>name</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad643c28d76d209750a3f0a25af84aa52" kind="variable"><name>type</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1a723ad7d3fe2ee347eff5a871583e4604" kind="variable"><name>access</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Property_1ad96eff3b88ae62ffece6d0d97938acae" kind="variable"><name>annotations</name></member>
+  </compound>
+  <compound refid="structbernese_1_1dbus__introspection_1_1Signal" kind="struct"><name>bernese::dbus_introspection::Signal</name>
+    <member refid="structbernese_1_1dbus__introspection_1_1Signal_1a69638e207848f1efc536dc3407216f84" kind="variable"><name>name</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Signal_1abf909aff44a3fc2efe35ff512f9aaa45" kind="variable"><name>output_args</name></member>
+    <member refid="structbernese_1_1dbus__introspection_1_1Signal_1ac4533e5593d580daaee14662ee2379eb" kind="variable"><name>annotations</name></member>
+  </compound>
   <compound refid="classbernese_1_1X11Info" kind="class"><name>bernese::X11Info</name>
     <member refid="classbernese_1_1X11Info_1ab88c5253d7b84b251a2c23cddaf7bdbe" kind="function"><name>IsPlatformX11</name></member>
     <member refid="classbernese_1_1X11Info_1aca576461c5dad7a8be9794ade9129aa4" kind="function"><name>GetDisplay</name></member>
@@ -27,6 +60,16 @@
     <member refid="classbernese_1_1X11Info_1a478cd7a80950b717e74bc6b25b770803" kind="function"><name>GetTimestamp</name></member>
   </compound>
   <compound refid="namespacebernese" kind="namespace"><name>bernese</name>
+  </compound>
+  <compound refid="namespacebernese_1_1dbus__introspection" kind="namespace"><name>bernese::dbus_introspection</name>
+    <member refid="dbus__introspection_8h_1a2bf8116c1bfdc076d02e775620f2f74f" kind="typedef"><name>Annotations</name></member>
+    <member refid="dbus__introspection_8h_1ad43ad7e11caed8a424418da758d2c277" kind="typedef"><name>Arguments</name></member>
+    <member refid="dbus__introspection_8h_1ac829700f7f8704d04475a20157586398" kind="typedef"><name>Interfaces</name></member>
+    <member refid="dbus__introspection_8cc_1a46a1e7d5ef9ce4b378d840a53779236d" kind="function"><name>ParseInterfaces</name></member>
+    <member refid="dbus__introspection_8cc_1afb3833bbdb32472bcd7fe02c7e002b45" kind="function"><name>IsValidMemberName</name></member>
+    <member refid="dbus__introspection_8cc_1ad63fbf336b4e2ad02d40f40719357688" kind="function"><name>IsValidInterfaceName</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1dbus__introspection_1_1_0d004015223133125035077356152351033001221323026253" kind="namespace"><name>bernese::dbus_introspection::@004015223133125035077356152351033001221323026253</name>
   </compound>
   <compound refid="namespacebernese_1_1file__dialog__utils" kind="namespace"><name>bernese::file_dialog_utils</name>
     <member refid="file__dialog__utils_8cc_1a82cfa66ad2c2c3f79f8b50df27098a2f" kind="function"><name>CleanFilterList</name></member>
@@ -42,6 +85,26 @@
   </compound>
   <compound refid="namespacebernese_1_1image__utils_1_1internal" kind="namespace"><name>bernese::image_utils::internal</name>
   </compound>
+  <compound refid="namespacebernese_1_1paint__utils" kind="namespace"><name>bernese::paint_utils</name>
+    <member refid="paint__utils_8cc_1a9fe35bad4fb7ca9c1f863b91c74bc87c" kind="function"><name>CopyPaintedArea</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1platform__utils" kind="namespace"><name>bernese::platform_utils</name>
+    <member refid="platform__utils_8cc_1ac9871cb7ab9df6d19b9a694eeff701bd" kind="function"><name>PlatformPluginKeys</name></member>
+    <member refid="platform__utils_8cc_1ad2c6b0a5960a09e5b6c502eb12b9d75a" kind="function"><name>HasPlatformPlugin</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1platform__utils_1_1_0d026166365070024173116162261224234132002317232224" kind="namespace"><name>bernese::platform_utils::@026166365070024173116162261224234132002317232224</name>
+  </compound>
+  <compound refid="namespacebernese_1_1tab__bar__utils" kind="namespace"><name>bernese::tab_bar_utils</name>
+    <member refid="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93a" kind="enum"><name>ScrollDirection</name></member>
+    <member refid="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93aa3d426ca44695e3526f85a129e059b7ff" kind="enumvalue"><name>kTowardFirst</name></member>
+    <member refid="tab__bar__utils_8h_1a05e9849d7173bc343d75eadcb3f0e93aa57f53fa6de8e50ca9cd9607ff84764bb" kind="enumvalue"><name>kTowardLast</name></member>
+    <member refid="tab__bar__utils_8cc_1aaaea06ad6cb8c88ba443d75284ebc733" kind="function"><name>InitTabBarBaseOption</name></member>
+    <member refid="tab__bar__utils_8cc_1ab817a688d59e66d5cdf144230c77f68f" kind="function"><name>ScrollButton</name></member>
+    <member refid="tab__bar__utils_8cc_1a715a598ac2b8549b64fb225c303d92a0" kind="function"><name>ScrollTabs</name></member>
+    <member refid="tab__bar__utils_8cc_1a9d9ea86ef4c8442befc6db08d1a02f8e" kind="function"><name>ScrollToTab</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1tab__bar__utils_1_1_0d024170015350067334376231002310236032045140007266" kind="namespace"><name>bernese::tab_bar_utils::@024170015350067334376231002310236032045140007266</name>
+  </compound>
   <compound refid="namespacebernese_1_1text__layout__utils" kind="namespace"><name>bernese::text_layout_utils</name>
     <member refid="text__layout__utils_8cc_1a6b110302e9f2026963091d190c8cad01" kind="function"><name>DrawElidedText</name></member>
   </compound>
@@ -56,11 +119,31 @@
   </compound>
   <compound refid="namespacebernese_1_1wayland_1_1internal" kind="namespace"><name>bernese::wayland::internal</name>
   </compound>
+  <compound refid="namespacebernese_1_1window__effects" kind="namespace"><name>bernese::window_effects</name>
+    <member refid="window__effects_8cc_1a2cb9b9403bf4a2be9f51e795fa36c770" kind="function"><name>SetBlurBehind</name></member>
+    <member refid="window__effects_8cc_1a62e3452923690cc846d5547eb86974b6" kind="function"><name>ClearBlurBehind</name></member>
+    <member refid="window__effects_8cc_1ae053d8f79d50444d6fcf205611dd4340" kind="function"><name>SetWindowRadius</name></member>
+    <member refid="window__effects_8cc_1a8c1eb13618c53e7a71a4481cca8f7143" kind="function"><name>SetNoTitleBar</name></member>
+    <member refid="window__effects_8cc_1a2f75ecab9cb31e5063f28099f675b3ca" kind="function"><name>HasCompositingManager</name></member>
+    <member refid="window__effects_8cc_1aca8f971d3a630e437008c4488d53b7f3" kind="function"><name>IsBlurBehindSupported</name></member>
+  </compound>
+  <compound refid="namespacebernese_1_1window__effects_1_1_0d225130050131146250201112011142015103031056106024" kind="namespace"><name>bernese::window_effects::@225130050131146250201112011142015103031056106024</name>
+  </compound>
+  <compound refid="namespacebernese_1_1window__effects_1_1internal" kind="namespace"><name>bernese::window_effects::internal</name>
+    <member refid="wayland__effects_8cc_1a1bc8cc08e744ca7d3e1d10170f6234c6" kind="function"><name>IsWayland</name></member>
+    <member refid="wayland__effects_8cc_1a06450dc0af0b52b9635e1d7418e90312" kind="function"><name>SetWaylandBlur</name></member>
+    <member refid="wayland__effects_8cc_1ac95c3a1e6e473efb74a4329d2c710a33" kind="function"><name>ClearWaylandBlur</name></member>
+    <member refid="wayland__effects_8cc_1ae360c4da14638f77bffc2ddd5e405f09" kind="function"><name>HasWaylandBlur</name></member>
+    <member refid="wayland__effects_8cc_1a1886ec9b183479ffb01ddbdf5690830f" kind="function"><name>SetWaylandWindowRadius</name></member>
+    <member refid="wayland__effects_8cc_1abaf1e89b5f4cdfbd4adca79e8baa59ac" kind="function"><name>SetWaylandNoTitleBar</name></member>
+  </compound>
   <compound refid="namespacebernese_1_1window__utils" kind="namespace"><name>bernese::window_utils</name>
     <member refid="window__geometry_8cc_1ae537d420850b549c2d2d074f8d8d45ea" kind="function"><name>ToNativePixels</name></member>
     <member refid="window__geometry_8cc_1a19e22a334070c833bb243ed3cc1d4c16" kind="function"><name>FromNativePixels</name></member>
     <member refid="window__geometry_8cc_1a116577f4858558df7da2859fba390465" kind="function"><name>NativeWindowGeometry</name></member>
     <member refid="window__geometry_8cc_1ae38f6f7263439ab660bd34cdec10a592" kind="function"><name>SetTopLevelGeometry</name></member>
+    <member refid="window__geometry_8cc_1a75cca031041624e04f45ea783f2b2700" kind="function"><name>SetTopLevelWindowGeometry</name></member>
+    <member refid="window__stack_8cc_1a2a5dd4333dc6a94784cf3cd3c18201da" kind="function"><name>TopLevelWindowClassAt</name></member>
     <member refid="window__utils_8cc_1a9db1a9c6470b793e6e6856807000c7d7" kind="function"><name>EdgesAt</name></member>
     <member refid="window__utils_8cc_1a37fe905863bed7f1110a7dd01e4cb815" kind="function"><name>MoveWindow</name></member>
     <member refid="window__utils_8cc_1a04b7cf185d1d19441b42031e872ea5d3" kind="function"><name>ResizeWindow</name></member>
@@ -73,6 +156,8 @@
     <member refid="window__utils_8cc_1a3d626a8f624bfd02db64a19eb1a1a3f1" kind="function"><name>SetHandleCursor</name></member>
     <member refid="window__utils_8cc_1ad1a16add490e8bfb168eb9000708798d" kind="function"><name>SetCursorByCursorType</name></member>
   </compound>
+  <compound refid="namespacebernese_1_1window__utils_1_1_0d314312147340047014034350107143006133274116043063" kind="namespace"><name>bernese::window_utils::@314312147340047014034350107143006133274116043063</name>
+  </compound>
   <compound refid="LICENSE" kind="file"><name>LICENSE</name>
   </compound>
   <compound refid="README_8md" kind="file"><name>README.md</name>
@@ -82,6 +167,10 @@
   <compound refid="backdrop__origin_8h" kind="file"><name>backdrop_origin.h</name>
   </compound>
   <compound refid="connection_8h" kind="file"><name>connection.h</name>
+  </compound>
+  <compound refid="dbus__introspection_8cc" kind="file"><name>dbus_introspection.cc</name>
+  </compound>
+  <compound refid="dbus__introspection_8h" kind="file"><name>dbus_introspection.h</name>
   </compound>
   <compound refid="file__dialog__utils_8cc" kind="file"><name>file_dialog_utils.cc</name>
   </compound>
@@ -93,13 +182,37 @@
   </compound>
   <compound refid="image__utils_8h" kind="file"><name>image_utils.h</name>
   </compound>
+  <compound refid="paint__utils_8cc" kind="file"><name>paint_utils.cc</name>
+  </compound>
+  <compound refid="paint__utils_8h" kind="file"><name>paint_utils.h</name>
+  </compound>
+  <compound refid="platform__utils_8cc" kind="file"><name>platform_utils.cc</name>
+  </compound>
+  <compound refid="platform__utils_8h" kind="file"><name>platform_utils.h</name>
+  </compound>
+  <compound refid="tab__bar__utils_8cc" kind="file"><name>tab_bar_utils.cc</name>
+  </compound>
+  <compound refid="tab__bar__utils_8h" kind="file"><name>tab_bar_utils.h</name>
+  </compound>
   <compound refid="text__layout__utils_8cc" kind="file"><name>text_layout_utils.cc</name>
   </compound>
   <compound refid="text__layout__utils_8h" kind="file"><name>text_layout_utils.h</name>
   </compound>
+  <compound refid="wayland__effects_8cc" kind="file"><name>wayland_effects.cc</name>
+  </compound>
+  <compound refid="wayland__effects_8h" kind="file"><name>wayland_effects.h</name>
+  </compound>
+  <compound refid="window__effects_8cc" kind="file"><name>window_effects.cc</name>
+  </compound>
+  <compound refid="window__effects_8h" kind="file"><name>window_effects.h</name>
+  </compound>
   <compound refid="window__geometry_8cc" kind="file"><name>window_geometry.cc</name>
   </compound>
   <compound refid="window__geometry_8h" kind="file"><name>window_geometry.h</name>
+  </compound>
+  <compound refid="window__stack_8cc" kind="file"><name>window_stack.cc</name>
+  </compound>
+  <compound refid="window__stack_8h" kind="file"><name>window_stack.h</name>
   </compound>
   <compound refid="window__utils_8cc" kind="file"><name>window_utils.cc</name>
   </compound>
@@ -115,13 +228,23 @@
   </compound>
   <compound refid="dir_aa8ce4bb2beff2f249a019f97e6d508d" kind="dir"><name>src/backdrop_origin/connection</name>
   </compound>
+  <compound refid="dir_959865e13cf92f16823e586012c2d035" kind="dir"><name>src/dbus_introspection</name>
+  </compound>
   <compound refid="dir_98ca2cffd6b079a45db86b63e7cbb5df" kind="dir"><name>src/file_dialog_utils</name>
   </compound>
   <compound refid="dir_091a4c3f56671012ef0088bfb194b9f9" kind="dir"><name>src/image_utils</name>
   </compound>
+  <compound refid="dir_79b3ee584302d8b294ff86fb6f3c5ec8" kind="dir"><name>src/paint_utils</name>
+  </compound>
+  <compound refid="dir_d68cb26f61e8d87cb06651edae1129c0" kind="dir"><name>src/platform_utils</name>
+  </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>
+  <compound refid="dir_242e321cdd870ef0ffe7683b958c0dd8" kind="dir"><name>src/tab_bar_utils</name>
+  </compound>
   <compound refid="dir_fd57b066ae6df75c31ad949ff830cd48" kind="dir"><name>src/text_layout_utils</name>
+  </compound>
+  <compound refid="dir_5db09dd6b8efa1069ef89b8fc5bfb6d9" kind="dir"><name>src/window_effects</name>
   </compound>
   <compound refid="dir_eca5b99db9fd3b26c35224ecfe0be349" kind="dir"><name>src/window_utils</name>
   </compound>

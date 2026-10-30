@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_79b3ee584302d8b294ff86fb6f3c5ec8" kind="dir">
+    <compoundname>src/paint_utils</compoundname>
+    <innerfile refid="paint__utils_8cc">paint_utils.cc</innerfile>
+    <innerfile refid="paint__utils_8h">paint_utils.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/paint_utils/"/>
+  </compounddef>
+</doxygen>

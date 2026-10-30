@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1window__effects_1_1internal" kind="namespace" language="C++">
+    <compoundname>bernese::window_effects::internal</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="wayland__effects_8cc_1a1bc8cc08e744ca7d3e1d10170f6234c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::IsWayland</definition>
+        <argsstring>()</argsstring>
+        <name>IsWayland</name>
+        <qualifiedname>bernese::window_effects::internal::IsWayland</qualifiedname>
+        <briefdescription>
+<para>Check whether Qt runs on Wayland. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True when Qt uses its Wayland platform plugin. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="426" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="426" bodyend="428" declfile="src/window_effects/wayland_effects.h" declline="37" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wayland__effects_8cc_1a06450dc0af0b52b9635e1d7418e90312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::SetWaylandBlur</definition>
+        <argsstring>(QWindow *window, const QList&lt; QRect &gt; &amp;areas)</argsstring>
+        <name>SetWaylandBlur</name>
+        <qualifiedname>bernese::window_effects::internal::SetWaylandBlur</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const QList&lt; QRect &gt; &amp;</type>
+          <declname>areas</declname>
+        </param>
+        <briefdescription>
+<para>Blur what is behind a Wayland window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses org_kde_kwin_blur on the wl_surface of the window, like DBlurEffectWidget. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shown window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>areas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Areas in logical pixels. Empty means the whole window, also after a resize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the blur was sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="430" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="430" bodyend="434" declfile="src/window_effects/wayland_effects.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wayland__effects_8cc_1ac95c3a1e6e473efb74a4329d2c710a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::ClearWaylandBlur</definition>
+        <argsstring>(QWindow *window)</argsstring>
+        <name>ClearWaylandBlur</name>
+        <qualifiedname>bernese::window_effects::internal::ClearWaylandBlur</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Remove the blur set by SetWaylandBlur(). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shown window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the request was sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="436" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="436" bodyend="439" declfile="src/window_effects/wayland_effects.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wayland__effects_8cc_1ae360c4da14638f77bffc2ddd5e405f09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::HasWaylandBlur</definition>
+        <argsstring>()</argsstring>
+        <name>HasWaylandBlur</name>
+        <qualifiedname>bernese::window_effects::internal::HasWaylandBlur</qualifiedname>
+        <briefdescription>
+<para>Check whether the compositor has the blur protocol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True when org_kde_kwin_blur_manager exists. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="441" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="441" bodyend="443" declfile="src/window_effects/wayland_effects.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wayland__effects_8cc_1a1886ec9b183479ffb01ddbdf5690830f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::SetWaylandWindowRadius</definition>
+        <argsstring>(QWindow *window, int radius)</argsstring>
+        <name>SetWaylandWindowRadius</name>
+        <qualifiedname>bernese::window_effects::internal::SetWaylandWindowRadius</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Set the corner radius the compositor draws for a Wayland window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the WindowRadius property of dde_shell, like DBlurEffectWidget. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shown window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corner radius in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the radius was sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="445" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="445" bodyend="449" declfile="src/window_effects/wayland_effects.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wayland__effects_8cc_1abaf1e89b5f4cdfbd4adca79e8baa59ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bernese::window_effects::internal::SetWaylandNoTitleBar</definition>
+        <argsstring>(QWindow *window, bool no_title_bar)</argsstring>
+        <name>SetWaylandNoTitleBar</name>
+        <qualifiedname>bernese::window_effects::internal::SetWaylandNoTitleBar</qualifiedname>
+        <param>
+          <type>QWindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>no_title_bar</declname>
+        </param>
+        <briefdescription>
+<para>Turn the CSD title bar of a Wayland window off or on. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the <computeroutput>NoTitleBar</computeroutput> property of dde_shell, like DMainWindow. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shown window, may be null. Not owned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>no_title_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to remove the title bar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True when the request was sent. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/window_effects/wayland_effects.cc" line="451" column="6" bodyfile="src/window_effects/wayland_effects.cc" bodystart="451" bodyend="455" declfile="src/window_effects/wayland_effects.h" declline="84" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/window_effects/wayland_effects.cc" line="47" column="1"/>
+  </compounddef>
+</doxygen>

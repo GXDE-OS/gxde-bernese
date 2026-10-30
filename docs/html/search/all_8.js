@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['source_20organization_0',['Source organization',['../index.html#autotoc_md4',1,'']]]
+  ['signal_0',['Signal',['../structbernese_1_1dbus__introspection_1_1Signal.html',1,'bernese::dbus_introspection']]]
 ];

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacebernese_1_1tab__bar__utils_1_1_0d024170015350067334376231002310236032045140007266" kind="namespace" language="C++">
+    <compoundname>bernese::tab_bar_utils::@024170015350067334376231002310236032045140007266</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tab_bar_utils/tab_bar_utils.cc" line="32" column="1"/>
+  </compounddef>
+</doxygen>
