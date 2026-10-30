@@ -237,6 +237,10 @@ bool SetWindowRadius(QWindow* window, int radius) {
   return internal::SetWaylandWindowRadius(window, radius);
 }
 
+bool SetNoTitleBar(QWindow* window, bool no_title_bar) {
+  return internal::SetWaylandNoTitleBar(window, no_title_bar);
+}
+
 bool HasCompositingManager() {
   xcb_connection_t* connection = X11Info::GetConnection();
   if (!connection) {

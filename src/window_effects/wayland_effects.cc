@@ -355,17 +355,31 @@ bool HasWaylandBlur() {
   return IsWayland() && GetGlobals().blur;
 }
 
-bool SetWaylandWindowRadius(QWindow* window, int radius) {
+namespace {
+
+// The dde_shell surface of a window, made on first use. Null when the
+// compositor has no dde_shell or the window has no surface.
+dde_shell_surface* ShellSurfaceOf(QWindow* window) {
   const Globals& globals = GetGlobals();
   Effects* effects =
       window && globals.shell ? GetTracker()->Get(window) : nullptr;
   if (!effects) {
-    return false;
+    return nullptr;
   }
 
   if (!effects->shell_surface) {
     effects->shell_surface =
         dde_shell_get_shell_surface(globals.shell, effects->surface);
+  }
+  return effects->shell_surface;
+}
+
+}  // namespace
+
+bool SetWaylandWindowRadius(QWindow* window, int radius) {
+  dde_shell_surface* shell_surface = ShellSurfaceOf(window);
+  if (!shell_surface) {
+    return false;
   }
 
   // Two floats: x radius and y radius.
@@ -377,7 +391,28 @@ bool SetWaylandWindowRadius(QWindow* window, int radius) {
     data[1] = static_cast<float>(radius);
   }
   dde_shell_surface_set_property(
-      effects->shell_surface, DDE_SHELL_PROPERTY_WINDOWRADIUS, &value);
+      shell_surface, DDE_SHELL_PROPERTY_WINDOWRADIUS, &value);
+  wl_array_release(&value);
+
+  Flush(window);
+  return true;
+}
+
+bool SetWaylandNoTitleBar(QWindow* window, bool no_title_bar) {
+  dde_shell_surface* shell_surface = ShellSurfaceOf(window);
+  if (!shell_surface) {
+    return false;
+  }
+
+  // One int: 1 means the app draws the title bar.
+  wl_array value;
+  wl_array_init(&value);
+  if (auto* data = static_cast<int32_t*>(
+          wl_array_add(&value, sizeof(int32_t)))) {
+    *data = no_title_bar ? 1 : 0;
+  }
+  dde_shell_surface_set_property(
+      shell_surface, DDE_SHELL_PROPERTY_NOTITLEBAR, &value);
   wl_array_release(&value);
 
   Flush(window);
@@ -410,6 +445,12 @@ bool HasWaylandBlur() {
 bool SetWaylandWindowRadius(QWindow* window, int radius) {
   Q_UNUSED(window)
   Q_UNUSED(radius)
+  return false;
+}
+
+bool SetWaylandNoTitleBar(QWindow* window, bool no_title_bar) {
+  Q_UNUSED(window)
+  Q_UNUSED(no_title_bar)
   return false;
 }
 

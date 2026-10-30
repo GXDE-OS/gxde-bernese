@@ -79,6 +79,15 @@ BERNESE_EXPORT bool ClearBlurBehind(QWindow* window);
 BERNESE_EXPORT bool SetWindowRadius(QWindow* window, int radius);
 
 /**
+ * @brief Ask the Wayland compositor not to draw a title bar for a window.
+ * 
+ * @param window Top-level window, may be null. Not owned.
+ * @param no_title_bar True to remove the title bar, false to bring it back.
+ * @return True when the request was sent. False otherwise (or not Wayland).
+ */
+BERNESE_EXPORT bool SetNoTitleBar(QWindow* window, bool no_title_bar);
+
+/**
  * @brief Check whether an X11 compositing manager is running.
  *
  * Replaces the D-XCB "hasComposite" platform function. It checks the owner

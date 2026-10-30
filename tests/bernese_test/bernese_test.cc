@@ -362,6 +362,8 @@ class BerneseTest : public QObject {
     QVERIFY(!bernese::window_effects::SetWindowRadius(nullptr, 1));
     // A window that was never shown has no Wayland surface.
     QVERIFY(!bernese::window_effects::SetWindowRadius(&window, 1));
+    QVERIFY(!bernese::window_effects::SetNoTitleBar(nullptr, true));
+    QVERIFY(!bernese::window_effects::SetNoTitleBar(&window, true));
 
     // No window manager to ask off X11 and Wayland.
     if (!x11 && QGuiApplication::platformName() != "wayland") {
@@ -387,6 +389,7 @@ class BerneseTest : public QObject {
                    &window, {QRect(0, 0, 50, 50)}),
           supported);
       bernese::window_effects::SetWindowRadius(&window, 1);
+      bernese::window_effects::SetNoTitleBar(&window, true);
       QCOMPARE(bernese::window_effects::ClearBlurBehind(&window), supported);
       window.hide();
     }

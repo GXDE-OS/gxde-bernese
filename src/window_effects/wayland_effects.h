@@ -73,6 +73,16 @@ bool HasWaylandBlur();
  */
 bool SetWaylandWindowRadius(QWindow* window, int radius);
 
+/**
+ * @brief Turn the CSD title bar of a Wayland window off or on.
+ *
+ * Uses the @c NoTitleBar property of dde_shell, like DMainWindow.
+ * @param window Shown window, may be null. Not owned.
+ * @param no_title_bar True to remove the title bar.
+ * @return True when the request was sent.
+ */
+bool SetWaylandNoTitleBar(QWindow* window, bool no_title_bar);
+
 }  // namespace internal
 }  // namespace window_effects
 }  // namespace bernese
