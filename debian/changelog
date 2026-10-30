@@ -1,3 +1,9 @@
+gxde-bernese (1.0.3-gxde3) unstable; urgency=medium
+
+  * Fixed behind window blur issue.
+
+ -- CharOfString <root@charofstring.cc> Fri, 30 Oct 2026 00:32:55 -0500
+
 gxde-bernese (1.0.3-gxde2) unstable; urgency=medium
 
   * Added Wayland helper that disables Wayland CSD decoration via dde_shell.
