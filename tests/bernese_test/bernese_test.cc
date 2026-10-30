@@ -388,6 +388,11 @@ class BerneseTest : public QObject {
       QCOMPARE(bernese::window_effects::SetBlurBehind(
                    &window, {QRect(0, 0, 50, 50)}),
           supported);
+      QCOMPARE(bernese::window_effects::SetBlurBehind(
+                   &window, {QRect(10, 10, 50, 30)}, 8),
+          supported);
+      QCOMPARE(bernese::window_effects::SetBlurBehind(&window, {}, 8),
+          supported);
       bernese::window_effects::SetWindowRadius(&window, 1);
       bernese::window_effects::SetNoTitleBar(&window, true);
       QCOMPARE(bernese::window_effects::ClearBlurBehind(&window), supported);

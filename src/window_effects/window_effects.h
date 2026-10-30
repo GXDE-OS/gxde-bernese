@@ -30,21 +30,10 @@ namespace window_effects {
 /**
  * @brief Blur what is behind a window.
  *
- * On X11 this writes the same window hints that D-XCB writes for
- * DBlurEffectWidget, so any QWindow can have the blur without DTK. It
- * writes the Deepin hint and the KDE hint, for Deepin WM, Flake WM and KWin.
- *
- * On Wayland this uses the org_kde_kwin_blur protocol, like
- * DBlurEffectWidget. The blur goes away when the window is hidden, so call
- * this again after each show. It works from the next frame, and the areas
- * have square corners.
- *
- * Call on the GUI thread. On X11 this creates the native window if needed.
- * On Wayland the window must be shown. The window needs an alpha channel.
  * @param window Top-level window, may be null. Not owned.
  * @param areas Areas to blur, in logical pixels in the window. Empty means
  *        the whole window.
- * @param radius Corner radius of the areas, in logical pixels. X11 only.
+ * @param radius Corner radius of the areas, in logical pixels.
  * @return True when the blur was sent. False on other platforms, for a null
  *         window, or on Wayland when the window is hidden or the compositor
  *         has no blur.

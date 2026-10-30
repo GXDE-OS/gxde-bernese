@@ -22,6 +22,7 @@
 #include <vector>
 
 #include "QByteArray"
+#include "QRegion"
 #include "QtGlobal"
 #include "xcb/xcb.h"
 
@@ -175,11 +176,49 @@ uint32_t ToNative(int value, qreal scale) {
   return static_cast<uint32_t>(qMax(0, qRound(value * scale)));
 }
 
+// The Wayland blur protocol only takes rectangles, so cut each area into
+// rectangles that follow its rounded corners. Same as DMenuEffect.
+QList<QRect> RoundedAreas(const QList<QRect>& areas, int radius) {
+  if (radius <= 0) {
+    return areas;
+  }
+
+  QList<QRect> rects;
+  for (const QRect& area : areas) {
+    const int r = qMin(radius, qMin(area.width(), area.height()) / 2);
+    const int d = r * 2;
+    QRegion region(area.adjusted(r, 0, -r, 0));
+    region += area.adjusted(0, r, 0, -r);
+    region += QRegion(area.x(), area.y(), d, d, QRegion::Ellipse) &
+        QRect(area.x(), area.y(), r, r);
+    region += QRegion(area.right() - d + 1, area.y(), d, d, QRegion::Ellipse) &
+        QRect(area.right() - r + 1, area.y(), r, r);
+    region +=
+        QRegion(area.x(), area.bottom() - d + 1, d, d, QRegion::Ellipse) &
+        QRect(area.x(), area.bottom() - r + 1, r, r);
+    region += QRegion(area.right() - d + 1, area.bottom() - d + 1, d, d,
+                  QRegion::Ellipse) &
+        QRect(area.right() - r + 1, area.bottom() - r + 1, r, r);
+    for (const QRect& rect : region) {
+      rects.append(rect);
+    }
+  }
+
+  return rects;
+}
+
 }  // namespace
 
 bool SetBlurBehind(QWindow* window, const QList<QRect>& areas, int radius) {
   if (internal::IsWayland()) {
-    return internal::SetWaylandBlur(window, areas);
+    if (radius <= 0 || !window) {
+      return internal::SetWaylandBlur(window, areas);
+    }
+
+    const QList<QRect> rects = areas.isEmpty()
+        ? QList<QRect>{QRect(QPoint(), window->size())}
+        : areas;
+    return internal::SetWaylandBlur(window, RoundedAreas(rects, radius));
   }
 
   xcb_connection_t* connection = X11Info::GetConnection();
