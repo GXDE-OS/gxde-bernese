@@ -204,7 +204,7 @@ QList<QRect> RoundedAreas(const QList<QRect>& areas, int radius) {
     }
   }
 
-  return rects;
+  return rects.isEmpty() ? areas : rects;
 }
 
 }  // namespace
