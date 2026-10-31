@@ -88,6 +88,13 @@ target_include_directories(bernese PUBLIC
 
 target_include_directories(bernese PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/wayland)
 
+# QGuiApplication::platformNativeInterface() and the wl_surface it returns are
+# declared in QtGui's private headers.  They are only used before Qt 6.9, where
+# QWindow::winId() is not the wl_surface; see window_effects/wayland_effects.cc.
+target_include_directories(bernese PRIVATE
+  ${${QT_PACKAGE}Gui_PRIVATE_INCLUDE_DIRS}
+)
+
 target_compile_features(bernese PUBLIC cxx_std_20)
 target_link_libraries(bernese
   PUBLIC

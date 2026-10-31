@@ -30,6 +30,10 @@
 // QNativeInterface::QWaylandApplication is public since Qt 6.5.
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 #include "QtGui/qguiapplication_platform.h"
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 9, 0)
+#include "qpa/qplatformnativeinterface.h"
+#endif
 #if QT_CONFIG(wayland)
 #define BERNESE_WAYLAND_EFFECTS 1
 #endif
@@ -160,8 +164,8 @@ const Globals& GetGlobals() {
 /**
  * @brief Get the wl_surface of a window.
  *
- * Qt Wayland uses the wl_surface as the window id. We check the class name,
- * so we do nothing if that ever changes.
+ * Qt Wayland uses the wl_surface as the window id.  We check the class name,
+ * so we do nothing if that ever changes.  That is only true since Qt 6.9.
  * @param window The window.
  * @return The surface, or null when there is none.
  */
@@ -171,12 +175,27 @@ wl_surface* SurfaceOf(QWindow* window) {
     return nullptr;
   }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 9, 0)
+  // Qt Wayland uses the wl_surface as the window id. We check the class name,
+  // so we do nothing if that ever changes.
   auto* proxy = reinterpret_cast<wl_proxy*>(window->winId());
   if (!proxy ||
       std::strcmp(wl_proxy_get_class(proxy), wl_surface_interface.name) != 0) {
     return nullptr;
   }
   return reinterpret_cast<wl_surface*>(proxy);
+#else
+  // Before Qt 6.9 winId() is a dummy id, so ask the platform plugin for the
+  // surface instead.  That needs a QtGui private header, which is why the
+  // no-qt-private-api check is skipped for these Qt versions - without it
+  // there is no way to blur a window on the wayland compositor at all.
+  if (QPlatformNativeInterface* native =
+          QGuiApplication::platformNativeInterface()) {
+    return static_cast<wl_surface*>(
+        native->nativeResourceForWindow("surface", window));
+  }
+  return nullptr;
+#endif
 }
 
 /**
