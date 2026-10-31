@@ -30,6 +30,7 @@
 // QNativeInterface::QWaylandApplication is public since Qt 6.5.
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
 #include "QtGui/qguiapplication_platform.h"
+#include "qpa/qplatformnativeinterface.h"
 #if QT_CONFIG(wayland)
 #define BERNESE_WAYLAND_EFFECTS 1
 #endif
@@ -171,9 +172,25 @@ wl_surface* SurfaceOf(QWindow* window) {
     return nullptr;
   }
 
-  auto* proxy = reinterpret_cast<wl_proxy*>(window->winId());
-  if (!proxy ||
-      std::strcmp(wl_proxy_get_class(proxy), wl_surface_interface.name) != 0) {
+  // QWindow::winId() is not the wl_surface on every Qt version: Qt 6.8
+  // returns a dummy id (1), and passing it to wl_proxy_get_class() crashes.
+  // Ask the platform plugin for the surface instead.
+  if (QPlatformNativeInterface* native =
+          QGuiApplication::platformNativeInterface()) {
+    if (auto* surface = static_cast<wl_surface*>(
+            native->nativeResourceForWindow("surface", window))) {
+      return surface;
+    }
+  }
+
+  // Fallback for platforms where the resource is not published: Qt Wayland
+  // has used the wl_surface as the window id, so check the class first.
+  const WId id = window->winId();
+  if (id < 0x10000) {
+    return nullptr;
+  }
+  auto* proxy = reinterpret_cast<wl_proxy*>(id);
+  if (std::strcmp(wl_proxy_get_class(proxy), wl_surface_interface.name) != 0) {
     return nullptr;
   }
   return reinterpret_cast<wl_surface*>(proxy);

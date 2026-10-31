@@ -1,3 +1,14 @@
+gxde-bernese (1.0.3-gxde5) unstable; urgency=medium
+
+  * Fix a crash in SetBlurBehind() on Wayland with Qt < 6.9.
+    QWindow::winId() does not return the wl_surface there (Qt 6.8 gives 1),
+    so the id was handed to wl_proxy_get_class() and the process died on
+    the first blur request.  Ask the platform plugin for the surface with
+    QPlatformNativeInterface and only fall back to the window id when it
+    looks like a pointer.
+
+ -- shenmo <shenmo@spark-app.store>  Sat, 31 Oct 2026 22:40:00 +0800
+
 gxde-bernese (1.0.3-gxde4) unstable; urgency=medium
 
   * Keep empty areas giving now rectangle, which stands for the whole window
