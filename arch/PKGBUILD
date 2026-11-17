@@ -1,4 +1,4 @@
-pkgname=gxde-bernese-git
+pkgname=gxde-bernese
 _pkgname=gxde-bernese
 pkgver=1.0.3
 pkgrel=4
@@ -9,8 +9,9 @@ url='https://github.com/GXDE-OS/gxde-bernese'
 license=('GPL-3.0-or-later')
 depends=('gcc-libs' 'glibc' 'libx11' 'libxcb' 'qt6-base' 'wayland')
 makedepends=('cmake' 'git' 'ninja' 'pkgconf')
-provides=("${_pkgname}=${pkgver}")
-conflicts=("${_pkgname}")
+provides=("gxde-bernese-git=$pkgver")
+conflicts=('gxde-bernese-git')
+replaces=('gxde-bernese-git')
 
 source=()
 sha256sums=()
